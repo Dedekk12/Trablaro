@@ -1,1 +1,52 @@
+poderia colocar cada linha entre as comandos escreva(" e "):   aaaaaaaaaaaaa   
+  a::::::::::::a  
+  aaaaaaaaa:::::a 
+           a::::a 
+    aaaaaaa:::::a 
+  aa::::::::::::a 
+ a::::aaaa::::::a 
+a::::a    a:::::a 
+a::::a    a:::::a 
+a:::::aaaa::::::a 
+ a::::::::::aa:::a
+  aaaaaaaaaa  aaaa
+O ChatGPT disse:
+ChatGPT
+Claro! Aqui está o texto formatado:
 
+plaintext
+Copiar código
+escreva("aaaaaaaaaaaaa")
+escreva("  a::::::::::::a")
+escreva("  aaaaaaaaa:::::a")
+escreva("           a::::a")
+escreva("    aaaaaaa:::::a")
+escreva("  aa::::::::::::a")
+escreva(" a::::aaaa::::::a")
+escreva("a::::a    a:::::a")
+escreva("a::::a    a:::::a")
+escreva("a:::::aaaa::::::a")
+escreva(" a::::::::::aa:::a")
+escreva("  aaaaaaaaaa  aaaa")
+
+
+Você disse:
+mude os ultimos digitos ") para \n")
+O ChatGPT disse:
+ChatGPT
+Claro! Aqui está o texto com a alteração solicitada:
+
+plaintext
+Copiar código
+escreva("aaaaaaaaaaaaa\n")
+escreva("  a::::::::::::a\n")
+escreva("  aaaaaaaaa:::::a\n")
+escreva("           a::::a\n")
+escreva("    aaaaaaa:::::a\n")
+escreva("  aa::::::::::::a\n")
+escreva(" a::::aaaa::::::a\n")
+escreva("a::::a    a:::::a\n")
+escreva("a::::a    a:::::a\n")
+escreva("a:::::aaaa::::::a\n")
+escreva(" a::::::::::aa:::a\n")
+escreva("  aaaaaaaaaa  aaaa\n")
