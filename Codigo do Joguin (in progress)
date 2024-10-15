@@ -4,7 +4,7 @@ programa
      inclua biblioteca Util --> u
      inclua biblioteca Matematica --> m
 	
-inteiro vida = 1
+        inteiro vida = 1
 	inteiro dano_boss	
 	cadeia lista[2]
 	
