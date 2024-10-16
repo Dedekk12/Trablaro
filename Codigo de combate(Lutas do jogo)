@@ -1,2 +1,55 @@
-//Requirimentos usar as variaveis globais de vida e dano_boss.
-//O dano do boss tem que ser um valor fixo.
+//Isso é só um rascunho/exemplo, vamo mudar dps
+
+
+programa
+{
+	inclua biblioteca Util --> u
+  inclua biblioteca Matematica --> m
+  
+   inteiro vida_jogador
+   inteiro vida_inimigo
+   inteiro dano_jogador
+   inteiro dano_boss
+   inteiro dano_inimigo
+   inteiro turno// 0 para jogador, 1 para inimigo
+	
+	funcao inicio()
+	{
+    // Inicialização das variáveis
+    vida_jogador = 100
+    vida_inimigo = 100     //Isso é só um rascunho/exemplo, vamo mudar dps
+    dano_jogador = 20
+    dano_inimigo = 15
+    turno = 0 // Começa com o jogador
+
+    // Loop de combate
+    enquanto (vida_jogador > 0)(vida_inimigo > 0) faca
+        // Exibe o status atual
+        escreva("Vida do Jogador: ", vida_jogador, " | Vida do Inimigo: ", vida_inimigo, "\n")
+
+        // Turno do jogador
+    enquanto (turno = 0) entao
+            escreva("Sua vez! Você ataca!\n")
+            vida_inimigo = vida_inimigo - dano_jogador
+            escreva("Você causou ", dano_jogador, " de dano ao inimigo!\n")
+            turno = 1 // Passa para o turno do inimigo
+        senao
+            // Turno do inimigo
+            escreva("É a vez do inimigo! Ele ataca!\n")
+            vida_jogador := vida_jogador - dano_inimigo
+            escreva("O inimigo causou ", dano_inimigo, " de dano a você!\n")
+            turno = 0 // Passa para o turno do jogador
+        fimse
+        escreva("\n")
+    fimenquanto
+
+    // Verifica quem venceu
+    se (vida_jogador <= 0) entao
+        escreva("Você foi derrotado! Fim do jogo.\n")
+    senao
+        escreva("Você venceu o inimigo! Parabéns!\n")
+    fimse
+fimalgoritmo
+
+	}
+}
