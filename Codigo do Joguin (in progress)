@@ -30,6 +30,7 @@ programa
     linha()
     escreva("    -Moai era um famoso degustador de vinho, que perdeu sua fama após ser acusado de ser uma farsa. \n   Embora ele tenha uma vida tranquila em sua humilde residencia localizada na Califórnia, \n com o dinheiro que conseguiu na sua epóca de fama. \n   Ele não imaginava que ia ter uma mudança que iria mudar a sua vida completamente. \n")
     linha()
+    escreva("PRESSIONE [1] PARA CONTINUAR : ")
     leia(escolhas)
     limpa()
     
