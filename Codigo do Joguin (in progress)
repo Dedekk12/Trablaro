@@ -33,6 +33,11 @@ programa
     escreva("PRESSIONE [1] PARA CONTINUAR : ")
     leia(escolhas)
     limpa()
+    linha()
+    escreva("   -Certo dia enquanto Moai estava relaxando em sua casa cuidando de sua coleção de vinhos requintados e regando seu jardim de espécies raras. \n  Quando de repente escuta um barulho na cozinha, e vai verificar. \n  Chegando lá ele se depara com uma pessoa que nunca viu na vida com o rosto completamente coberto, \n E antes mesmo que ele possa reagir, ele só escuta um som : BONK! \n E desmaia.\n")
+    linha()
+    escreva("PRESSIONE [1] PARA CONTINUAR : ")
+    leia(escolhas)
     
 		
 		
