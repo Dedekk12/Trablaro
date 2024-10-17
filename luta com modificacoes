@@ -7,7 +7,7 @@ programa
   inclua biblioteca Matematica --> m
   
    inteiro vida_jogador_max = 100
-   inteiro vida_jogador = 100
+   inteiro vida_jogador = 80
    inteiro vida_inimigo_max = 100
    inteiro vida_inimigo = 100
    inteiro dano_j = 10 //jogado
@@ -97,13 +97,13 @@ programa
         vida_jogador = vida_jogador + cura
        }senao{
         vida_jogador = vida_jogador + cura
+        
        }
-       se(vida_jogador == vida_jogador_max){
+       se(vida_jogador - cura == vida_jogador_max){
         escreva("Seu HP já está cheio \n")
         invi()
        }
-
-       escreva(vida_jogador)
+       escreva("Você curou ", cura, " pontos de vida \n")
         
         pare
 
