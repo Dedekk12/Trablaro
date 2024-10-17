@@ -7,7 +7,7 @@ programa
   inclua biblioteca Matematica --> m
   
    inteiro vida_jogador_max = 100
-   inteiro vida_jogador = 80
+   inteiro vida_jogador = 100
    inteiro vida_inimigo_max = 100
    inteiro vida_inimigo = 100
    inteiro dano_j = 10 //jogado
@@ -104,6 +104,8 @@ programa
         invi()
        }
        escreva("Você curou ", cura, " pontos de vida \n")
+       limpa()
+       inicio()
         
         pare
 
@@ -111,6 +113,8 @@ programa
        linha()
        escreva("Uma estranha energia emana do grimório \n")
        linha()
+       limpa()
+       inicio()
 
        pare
 
@@ -120,9 +124,10 @@ programa
 
        pare
 
-       caso contrario :2
+       caso contrario :
         limpa()
         invi()
+        inicio()
 
         pare
     }
