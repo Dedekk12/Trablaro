@@ -1,0 +1,140 @@
+//Isso é só um rascunho/exemplo, vamo mudar dps
+
+
+programa
+{
+	inclua biblioteca Util --> u
+  inclua biblioteca Matematica --> m
+  
+   inteiro vida_jogador_max = 100
+   inteiro vida_jogador = 100
+   inteiro vida_inimigo_max = 100
+   inteiro vida_inimigo = 100
+   inteiro dano_j = 10 //jogado
+   inteiro dano_b // boss
+   inteiro turno// 0 para jogador, 1 para inimigo
+	
+	funcao inicio()
+	{
+    inteiro acao
+       linha()
+       escreva("┏┓┳┏┓┓┏┏┳┓╻   HP : ", vida_jogador, "/" , vida_jogador_max , "   |AÇÕES ---->       [1] ATK | \n")
+       escreva("┣ ┃┃┓┣┫ ┃ ┃                 |\n")
+	  escreva("┻ ┻┗┛┛┗ ┻ •   ATK : " , 10 , " ~ ?? |      ---->       [2] INV |\n")
+    leia(acao)
+  	   linha()
+       
+
+    escolha(acao) {
+
+      caso 1 :
+      atack()
+
+      pare
+
+      caso 2 :
+      invi()
+
+      pare
+
+      caso contrario :
+      limpa()
+      inicio()
+
+      pare
+    }
+    // Começa com o jogador
+
+
+    // Loop de combate
+    
+
+    // Verifica quem venceu
+  
+   
+
+	}
+
+	funcao atack() {
+	inteiro dano_causado
+  dano_causado = u.sorteia(10, 30)
+
+  escreva("Você causou ", dano_causado, "  de dano nesse cara \n")
+  vida_inimigo = vida_inimigo - dano_causado
+
+  se( vida_inimigo < 0) {
+    escreva("Você mato esse cara \n")
+ 
+  }senao {
+    inicio()
+  }
+ 
+
+	}
+
+	funcao invi(){
+
+  cadeia lista[3]
+  inteiro item
+    
+    linha()
+    escreva("Seus itens: \n")
+    escreva("1- Poção de cura \n")
+    escreva("2- Grimório \n")
+    escreva("3- Sair \n")
+    leia(item)
+    linha()
+
+    escolha(item) {
+       caso 1 :
+       inteiro cura = 25
+       linha()
+       escreva("Poção de cura foi usada \n")
+       linha()
+
+       se(vida_jogador + cura > vida_jogador_max) {
+        cura = vida_jogador_max - vida_jogador
+        vida_jogador = vida_jogador + cura
+       }senao{
+        vida_jogador = vida_jogador + cura
+       }
+       se(vida_jogador == vida_jogador_max){
+        escreva("Seu HP já está cheio \n")
+        invi()
+       }
+
+       escreva(vida_jogador)
+        
+        pare
+
+       caso 2 :
+       linha()
+       escreva("Uma estranha energia emana do grimório \n")
+       linha()
+
+       pare
+
+       caso 3 :
+       limpa()
+       inicio()
+
+       pare
+
+       caso contrario :2
+        limpa()
+        invi()
+
+        pare
+    }
+  }
+
+
+
+
+		
+	
+	
+	funcao linha(){
+		escreva("=============================================================================================================================================================================================\n")  
+	}
+}
