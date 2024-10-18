@@ -23,6 +23,24 @@ programa
      escreva("\\__ \\ _| (_) | |_| | _|\\__ \\ | | |   / (_) | | |) | (_) | | |\\/| | (_) / _ \\ | |\n")
      escreva("|___/___\\__\\_\\\\___/|___|___/ |_| |_|_\\\\___/  |___/ \\___/  |_|  |_|\\___/_/ \\_\\___|\n")
      linha()		
+
+    escreva("                               ^              \n")
+    escreva("                _______     ^^^             \n")
+    escreva("               |xxxxxxx|  _^^^^^_           \n")
+    escreva("               |xxxxxxx| | [][]  |          \n")
+    escreva("            ______xxxxx| |[][][] |          \n")
+    escreva("           |++++++|xxxx| | [][][]|          \n")
+    escreva("           |++++++|xxxx| |[][][] |          \n")
+    escreva("           |++++++|_________ [][]|          \n")
+    escreva("           |++++++|=|=|=|=|=| [] |          \n")
+    escreva("           |++++++|=|=|=|=|=|[][]|          \n")
+    escreva("___________|++HH++|  _HHHH__|   _________   \n")
+    escreva("         _______________   ______________   \n")
+    escreva("==================  ===========    ==========  \n")
+
+
+
+     linha()
      escreva("PRESSIONE [1] PARA INICIAR O JOGO :  ")
      leia(escolhas)
      limpa()
@@ -70,7 +88,13 @@ programa
      limpa()
     
     linha() // CORREDOR COM O CORPSE
-    
+     escreva("___ ___  ___ ___ ___ ___   ___  ___ \n")
+     escreva("  / __/ _ \\| _ \\ _ \\ __|   \\ / _ \\| _ \\ \n")
+     escreva(" | (_| (_) |   /   / _|| |) | (_) |   / \n")
+     escreva("  \\___\\___/|_|_\\_|_\\___|___/ \\___/|_|_\\ \n")      
+     linha()
+     //escreva("
+
 	
 		
 	}
