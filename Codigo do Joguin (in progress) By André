@@ -81,6 +81,26 @@ programa
       
      limpa()
      linha()
+
+    escreva("             ___     \n")
+    escreva("        ,-'","'___'","'-. \n")
+    escreva("       .;'","''| |`'","':. \n")
+    escreva("       || | | | | || \n")
+    escreva("       ||_|_|_|_|_|| \n")
+    escreva("      //          /| \n")
+    escreva("     /__         //| \n")
+    escreva(" ,-'","'___'","'-.    //|| \n")
+    escreva(".;'","''| |`'", "':.  //   \n")
+    escreva("||/| | | | || //    \n")
+    escreva("||_|_|_|_|_||//     \n")
+    escreva("||_________||/      \n")
+    escreva("||         ||       \n")
+    escreva("''         ''     \n")
+
+
+
+
+     linha()
      escreva("  -Após um longo tempo demasiado desmaiado Moai acorda com o frio de um chão gelado. \n Aos poucos recuperando seus sentidos ele tenta compreender a situação em que se encontra e decide analisar os arredores, \n e ele percebe que se encontra numa cela com um conchão mofado e um buraco de fossa ele também percebe que sua cela está com a porta aberta, \n e que tem apenas uma  única luz visivel em um corredor a frente. \n")
      linha()
      escreva("PRESSIONE [1] PARA CONTINUAR : ")
