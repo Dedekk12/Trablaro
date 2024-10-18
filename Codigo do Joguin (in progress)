@@ -4,10 +4,12 @@ programa
   inclua biblioteca Util --> u
   inclua biblioteca Matematica --> m
 	
-  inteiro vida = 1
-	inteiro dano_boss	
-	cadeia lista[2]
-  inteiro escolhas
+   inteiro vida_jogador_max = 100
+   inteiro vida_jogador = 10
+   inteiro vida_inimigo_max = 100
+   inteiro dano_j = 10 //jogado
+   inteiro dano_b = 20 // boss
+   inteiro turno  // 0 para jogador, 1 para inimigo
 	
 
 	
@@ -43,25 +45,32 @@ programa
      leia(escolhas)
      limpa()
 
-    linha()// INICIO DO JOGO APRESENTANDO O OBJETIVO
-    escreva("     ______   _______      _____  ________  ________  ______  __     __   ______                    ______    ______   _______   _______   ________  __     __  ______  __     __   ______  \n")
-    escreva(" /      \\ |       \\    |     \\|        \\|        \\|      \\|  \\   |  \\ /      \\                  /      \\  /      \\ |       \\ |       \\ |        \\|  \\   |  \\|      \\|  \\   |  \\ /      \\ \n")
-    escreva("|  $$$$$$\\| $$$$$$$\\    \\$$$$$| $$$$$$$$ \\$$$$$$$$ \\$$$$$$| $$   | $$|  $$$$$$\\       __       |  $$$$$$\\|  $$$$$$\\| $$$$$$$\\| $$$$$$$\\| $$$$$$$$| $$   | $$ \\$$$$$$| $$   | $$|  $$$$$$\\\n")
-    escreva("| $$  | $$| $$__/ $$      | $$| $$__       | $$     | $$  | $$   | $$| $$  | $$      |  \\      | $$___\\$$| $$  | $$| $$__/ $$| $$__| $$| $$__    | $$   | $$  | $$  | $$   | $$| $$__| $$\n")
-    escreva("| $$  | $$| $$    $$ __   | $$| $$  \\      | $$     | $$   \\$$\\ /  $$| $$  | $$       \\$$       \\$$    \\ | $$  | $$| $$    $$| $$    $$| $$  \\    \\$$\\ /  $$  | $$   \\$$\\ /  $$| $$    $$\n")
-    escreva("| $$  | $$| $$$$$$$\\|  \\  | $$| $$$$$      | $$     | $$    \\$$\\  $$ | $$  | $$       __        _\\$$$$$$\\| $$  | $$| $$$$$$$\\| $$$$$$$\\| $$$$$     \\$$\\  $$   | $$    \\$$\\  $$ | $$$$$$$$\n")
-    escreva("| $$__/ $$| $$__/ $$| $$__| $$| $$_____    | $$    _| $$_    \\$$ $$  | $$__/ $$      |  \\      |  \\__| $$| $$__/ $$| $$__/ $$| $$  | $$| $$_____    \\$$ $$   _| $$_    \\$$ $$  | $$  | $$\n")
-    escreva(" \\$$    $$| $$    $$ \\$$    $$| $$     \\   | $$   |   $$ \\    \\$$$    \\$$    $$       \\$$       \\$$    $$ \\$$    $$| $$    $$| $$  | $$| $$     \\    \\$$$   |   $$ \\    \\$$$   | $$  | $$\n")
-    escreva("  \\$$$$$$  \\$$$$$$$   \\$$$$$$  \\$$$$$$$$    \\$$    \\$$$$$$     \\$      \\$$$$$$                   \\$$$$$$   \\$$$$$$  \\$$$$$$$  \\$$   \\$$ \\$$$$$$$$     \\$     \\$$$$$$     \\$     \\$$   \\$$\n \n")
-    escreva("(opcional)")
-    linha()
-    escreva("PRESSIONE [1] PARA CONTINUAR : ")
-    leia()
-
-
-
+    linha()// INICIO DO JOGO APRESENTANDO O OBJETIVO E APARECENDO NA AREA INICIAL ( SPAWN )
+     escreva("     ______   _______      _____  ________  ________  ______  __     __   ______                    ______    ______   _______   _______   ________  __     __  ______  __     __   ______  \n")
+     escreva(" /      \\ |       \\    |     \\|        \\|        \\|      \\|  \\   |  \\ /      \\                  /      \\  /      \\ |       \\ |       \\ |        \\|  \\   |  \\|      \\|  \\   |  \\ /      \\ \n")
+     escreva("|  $$$$$$\\| $$$$$$$\\    \\$$$$$| $$$$$$$$ \\$$$$$$$$ \\$$$$$$| $$   | $$|  $$$$$$\\       __       |  $$$$$$\\|  $$$$$$\\| $$$$$$$\\| $$$$$$$\\| $$$$$$$$| $$   | $$ \\$$$$$$| $$   | $$|  $$$$$$\\\n")
+     escreva("| $$  | $$| $$__/ $$      | $$| $$__       | $$     | $$  | $$   | $$| $$  | $$      |  \\      | $$___\\$$| $$  | $$| $$__/ $$| $$__| $$| $$__    | $$   | $$  | $$  | $$   | $$| $$__| $$\n")
+     escreva("| $$  | $$| $$    $$ __   | $$| $$  \\      | $$     | $$   \\$$\\ /  $$| $$  | $$       \\$$       \\$$    \\ | $$  | $$| $$    $$| $$    $$| $$  \\    \\$$\\ /  $$  | $$   \\$$\\ /  $$| $$    $$\n")
+     escreva("| $$  | $$| $$$$$$$\\|  \\  | $$| $$$$$      | $$     | $$    \\$$\\  $$ | $$  | $$       __        _\\$$$$$$\\| $$  | $$| $$$$$$$\\| $$$$$$$\\| $$$$$     \\$$\\  $$   | $$    \\$$\\  $$ | $$$$$$$$\n")
+     escreva("| $$__/ $$| $$__/ $$| $$__| $$| $$_____    | $$    _| $$_    \\$$ $$  | $$__/ $$      |  \\      |  \\__| $$| $$__/ $$| $$__/ $$| $$  | $$| $$_____    \\$$ $$   _| $$_    \\$$ $$  | $$  | $$\n")
+     escreva(" \\$$    $$| $$    $$ \\$$    $$| $$     \\   | $$   |   $$ \\    \\$$$    \\$$    $$       \\$$       \\$$    $$ \\$$    $$| $$    $$| $$  | $$| $$     \\    \\$$$   |   $$ \\    \\$$$   | $$  | $$\n")
+     escreva("  \\$$$$$$  \\$$$$$$$   \\$$$$$$  \\$$$$$$$$    \\$$    \\$$$$$$     \\$      \\$$$$$$                   \\$$$$$$   \\$$$$$$  \\$$$$$$$  \\$$   \\$$ \\$$$$$$$$     \\$     \\$$$$$$     \\$     \\$$   \\$$\n \n")
+     escreva("(opcional)")
+     linha()
+     escreva("PRESSIONE [1] PARA CONTINUAR : ")
+     leia(escolhas)
+      
+     limpa()
+     linha()
+     escreva("  -Após um longo tempo demasiado desmaiado Moai acorda com o frio de um chão gelado. \n Aos poucos recuperando seus sentidos ele tenta compreender a situação em que se encontra e decide analisar os arredores, \n e ele percebe que se encontra numa cela com um conchão mofado e um buraco de fossa ele também percebe que sua cela está com a porta aberta, \n e que tem apenas uma  única luz visivel em um corredor a frente. \n")
+     linha()
+     escreva("PRESSIONE [1] PARA CONTINUAR : ")
+     leia(escolhas)
+     limpa()
     
-		
+    linha() // CORREDOR COM O CORPSE
+    
+	
 		
 	}
 	//funcao investiga(){
@@ -98,4 +107,3 @@ programa
 
    }
 }
-
