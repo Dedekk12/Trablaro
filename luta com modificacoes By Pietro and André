@@ -1,9 +1,8 @@
 //Isso é só um rascunho/exemplo, vamo mudar dps
 
 
-programa
-{
-	inclua biblioteca Util --> u
+programa {
+  inclua biblioteca Util --> u
   inclua biblioteca Matematica --> m
   
    inteiro vida_jogador_max = 100
@@ -13,14 +12,15 @@ programa
    inteiro dano_j = 10 //jogado
    inteiro dano_b // boss
    inteiro turno// 0 para jogador, 1 para inimigo
-	
-	funcao inicio()
-	{
-   turno_jogado()
-  
+
+
+  funcao inicio() {
+    combate()
   }
-    funcao turno_jogado(){
-    inteiro acao
+    funcao combate(){
+
+
+   inteiro acao
        linha()
        escreva("┏┓┳┏┓┓┏┏┳┓╻   HP : ", vida_jogador, "/" , vida_jogador_max , "   |AÇÕES ---->       [1] ATK | \n")
        escreva("┣ ┃┃┓┣┫ ┃ ┃                 |\n")
@@ -49,15 +49,6 @@ programa
 
       pare
     }
-    // Começa com o jogador
-
-
-    // Loop de combate
-    
-
-    // Verifica quem venceu
-  
-   
 
 	}
 
@@ -67,12 +58,14 @@ programa
 
   escreva("Você causou ", dano_causado, "  de dano nesse cara \n")
   vida_inimigo = vida_inimigo - dano_causado
+  u.aguarde(1000)
+  limpa()
 
   se( vida_inimigo < 0) {
     escreva("Você mato esse cara \n")
  
   }senao {
-    inicio()
+    combate()
   }
  
 
@@ -80,8 +73,8 @@ programa
 
 	funcao invi(){
 
-  cadeia lista[3]
-  inteiro item
+    cadeia lista[3]
+    inteiro item
     limpa()
     linha()
     escreva(" _  _  _  _ _  ___  _  _  ___  _   ___ _  _          | Seus itens: \n")
@@ -132,7 +125,7 @@ programa
 
        caso 3 :
        limpa()
-       inicio()
+       combate()
 
        pare
 
@@ -143,3 +136,8 @@ programa
         pare
     }
   }
+  //funcao linha(){ // TRAÇA UMA LINHA
+	//	escreva("=============================================================================================================================================================================================\n")
+    
+	//  }
+}
