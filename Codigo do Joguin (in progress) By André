@@ -124,7 +124,7 @@ programa
      escreva(" | (_| (_) |   /   / _|| |) | (_) |   / \n")
      escreva("  \\___\\___/|_|_\\_|_\\___|___/ \\___/|_|_\\ \n")      
      linha()
-    // u.aguarde(1000)
+     // u.aguarde(1000)
      escreva(" -Moai ao chegar no corredor, ele se depara com algo que nunca experenciou antes, \n algo que nínguem!! deveria sofrer, ele se depara com uma cena que o deixa HORRORIZADO!! \n")
      linha()
      escreva("PRESSIOE [1] PARA CONTINUAR : ")
@@ -173,13 +173,13 @@ programa
        limpa()
       
 
-	linha()
+	   linha()
       escreva("___ ___  ___ ___ ___ ___   ___  ___ \n")
      escreva("  / __/ _ \\| _ \\ _ \\ __|   \\ / _ \\| _ \\ \n")
      escreva(" | (_| (_) |   /   / _|| |) | (_) |   / \n")
      escreva("  \\___\\___/|_|_\\_|_\\___|___/ \\___/|_|_\\ \n")      
      linha()
-    // u.aguarde(1000)
+     // u.aguarde(1000)
       escreva(" -Após Moai ver um corpo completamente decomposto e irreconhecível. \n Ele fica em choque com a cena e tira um tempo pra se recompor, e decide investigar mais ao redor, \n e se depara com com mais corpos no caminho e encontra um ainda que não foi completamente decomposto, \n perto dele havi uma garrafa de vinho quebrada e um bilhete , que tinha algo escrito : \n ")
       escreva("  'AQUELE BABACA FICOU COMPLETAMENTE INSANO!!! ele prendeu a gente aqui só com um vinho estranho, \n algumas pessoas ja até morreram após beberem o vinho, eu não tenho a minima ideia do que ele ta pensando , para deixar até mesmo seus subordinados aqui, \n ele aparecia enquanto todos estavam dormindo e colocava mais uma pessoa e falava como 'Não Serve' , \n EU JA CANSEI DISSO!! , eu vo acabar com isso.' \n")
       linha()
@@ -189,11 +189,14 @@ programa
       leia(escolhas)
       //u.aguarde(100)
       limpa()
-       
-       
-       
+      escreva("___ ___  ___ ___ ___ ___   ___  ___ \n")
+     escreva("  / __/ _ \\| _ \\ _ \\ __|   \\ / _ \\| _ \\ \n")
+     escreva(" | (_| (_) |   /   / _|| |) | (_) |   / \n")
+     escreva("  \\___\\___/|_|_\\_|_\\___|___/ \\___/|_|_\\ \n")      
+     linha()
+     // u.aguarde(1000)
+     escreva(" -Ao terminar de ler Moai começa a se questionar a quanto tempo ele está ali, \n e também percebe três caminhos e com duvidas e medos ele continuar a avançar em meio as trevas, \n procurando uma saída desse profundo abismo. \n")
 
-	
 		
 	}
 	funcao linha(){ // TRAÇA UMA LINHA
