@@ -196,6 +196,11 @@ programa
      linha()
      // u.aguarde(1000)
      escreva(" -Ao terminar de ler Moai começa a se questionar a quanto tempo ele está ali, \n e também percebe três caminhos e com duvidas e medos ele continuar a avançar em meio as trevas, \n procurando uma saída desse profundo abismo. \n")
+     linha()
+     escreva("PRESSIONE [1] PARA CONTINUAR : ")
+     leia(escolhas)
+     //u.aguarde(1000)
+     limpa()
 
 		
 	}
