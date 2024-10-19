@@ -171,6 +171,18 @@ programa
        limpa()
        u.aguarde(1000)
 
+	linha()
+      escreva("___ ___  ___ ___ ___ ___   ___  ___ \n")
+     escreva("  / __/ _ \\| _ \\ _ \\ __|   \\ / _ \\| _ \\ \n")
+     escreva(" | (_| (_) |   /   / _|| |) | (_) |   / \n")
+     escreva("  \\___\\___/|_|_\\_|_\\___|___/ \\___/|_|_\\ \n")      
+     linha()
+     u.aguarde(1000)
+      escreva(" -Após Moai ver um corpo completamente destruido que é  irreconhecível, ")
+       
+       
+       
+
 	
 		
 	}
