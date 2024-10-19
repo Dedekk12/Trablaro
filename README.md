@@ -1,2 +1,0 @@
-# Trablaro
-JOguinho fd
