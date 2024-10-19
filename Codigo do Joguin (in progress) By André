@@ -7,6 +7,7 @@ programa
    inteiro vida_jogador_max = 100
    inteiro vida_jogador = 10
    inteiro vida_inimigo_max = 100
+   inteiro vida_inimigo = 100
    inteiro dano_j = 10 //jogado
    inteiro dano_b = 20 // boss
    inteiro turno  // 0 para jogador, 1 para inimigo
