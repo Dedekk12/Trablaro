@@ -42,10 +42,10 @@ programa
 
 
      linha()
-     u.aguarde(1000)
      escreva("PRESSIONE [1] PARA INICIAR O JOGO :  ")
      leia(escolhas)
      limpa()
+     u.aguarde(1000)
 
     linha() // INTRO
      escreva(" ___ _  _ _____ ___  ___  \n")
@@ -54,11 +54,12 @@ programa
      escreva(" |___|_|\\_| |_| |_|_\\\\___/  \n")
      linha()
      u.aguarde(1000)
-     escreva("    -Moai era um famoso degustador de vinho, que perdeu sua fama após ser acusado de ser uma farsa. \n   Embora ele tenha uma vida tranquila em sua humilde residencia localizada na Califórnia, \n com o dinheiro que conseguiu na sua epóca de fama. \n   Ele não imaginava que ia ter uma mudança que iria mudar a sua vida completamente. \n")
+     escreva("    -Moai era um famoso degustador de vinho, que perdeu sua fama após ser acusado de ser uma farsa.\n  Embora ele tenha uma vida tranquila em sua humilde residencia localizada na Califórnia, \n com o dinheiro que conseguiu na sua epóca de fama. \n   Ele não imaginava que ia ter uma mudança que iria mudar a sua vida completamente. \n")
      linha()
      escreva("PRESSIONE [1] PARA CONTINUAR : ")
      leia(escolhas)
      limpa()
+     u.aguarde(1000)
 
      linha()
      escreva(" ___ _  _ _____ ___  ___  \n")
@@ -72,6 +73,7 @@ programa
      escreva("PRESSIONE [1] PARA CONTINUAR : ")
      leia(escolhas)
      limpa()
+     u.aguarde(1000)
 
     linha()// INICIO DO JOGO APRESENTANDO O OBJETIVO E APARECENDO NA AREA INICIAL ( SPAWN )
      escreva("     ______   _______      _____  ________  ________  ______  __     __   ______                    ______    ______   _______   _______   ________  __     __  ______  __     __   ______  \n")
@@ -90,6 +92,7 @@ programa
      leia(escolhas)
       
      limpa()
+     u.aguarde(1000)
      linha()
       escreva("             ___     \n")
       escreva("        ,-'","'___'","'-. \n")
@@ -112,6 +115,7 @@ programa
      escreva("PRESSIONE [1] PARA CONTINUAR : ")
      leia(escolhas)
      limpa()
+     u.aguarde(1000)
     
     linha() // CORREDOR COM O CORPSE
      escreva("___ ___  ___ ___ ___ ___   ___  ___ \n")
@@ -125,6 +129,7 @@ programa
      escreva("PRESSIOE [1] PARA CONTINUAR : ")
      leia(escolhas)
      limpa()
+     u.aguarde(1000)
 
       linha()
      escreva("___ ___  ___ ___ ___ ___   ___  ___ \n")
@@ -163,6 +168,8 @@ programa
        u.aguarde(1000)
        escreva("PRESSIONE [1] PARA CONTINUAR : ")
        leia(escolhas)
+       limpa()
+       u.aguarde(1000)
 
 	
 		
