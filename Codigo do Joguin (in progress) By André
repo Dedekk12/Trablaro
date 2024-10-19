@@ -17,27 +17,27 @@ programa
 	funcao inicio()
 	{
 
-		inha()// MENU INICIAL
-     escreva("___ ___ ___  _   _ ___ ___ _____ ___  ___    ___   ___    __  __  ___   _   ___ \n")
-     escreva("/ __| __/ _ \\| | | | __/ __|_   _| _ \\/ _ \\  |   \\ / _ \\  |  \\/  |/ _ \\ /_\\ |_ _|\n")
-     escreva("\\__ \\ _| (_) | |_| | _|\\__ \\ | | |   / (_) | | |) | (_) | | |\\/| | (_) / _ \\ | |\n")
-     escreva("|___/___\\__\\_\\\\___/|___|___/ |_| |_|_\\\\___/  |___/ \\___/  |_|  |_|\\___/_/ \\_\\___|\n")
-     linha()	
-     u.aguarde(1000)	
+		linha()// MENU INICIAL
+      escreva("___ ___ ___  _   _ ___ ___ _____ ___  ___    ___   ___    __  __  ___   _   ___ \n")
+      escreva("/ __| __/ _ \\| | | | __/ __|_   _| _ \\/ _ \\  |   \\ / _ \\  |  \\/  |/ _ \\ /_\\ |_ _|\n")
+      escreva("\\__ \\ _| (_) | |_| | _|\\__ \\ | | |   / (_) | | |) | (_) | | |\\/| | (_) / _ \\ | |\n")
+      escreva("|___/___\\__\\_\\\\___/|___|___/ |_| |_|_\\\\___/  |___/ \\___/  |_|  |_|\\___/_/ \\_\\___|\n")
+      linha()	
+      u.aguarde(1000)	
 
-    escreva("                               ^              \n")
-    escreva("                _______     ^^^             \n")
-    escreva("               |xxxxxxx|  _^^^^^_           \n")
-    escreva("               |xxxxxxx| | [][]  |          \n")
-    escreva("            ______xxxxx| |[][][] |          \n")
-    escreva("           |++++++|xxxx| | [][][]|          \n")
-    escreva("           |++++++|xxxx| |[][][] |          \n")
-    escreva("           |++++++|_________ [][]|          \n")
-    escreva("           |++++++|=|=|=|=|=| [] |          \n")
-    escreva("           |++++++|=|=|=|=|=|[][]|          \n")
-    escreva("___________|++HH++|  _HHHH__|   _________   \n")
-    escreva("         _______________   ______________   \n")
-    escreva("==================  ===========    ==========  \n")
+      escreva("                               ^              \n")
+      escreva("                _______     ^^^             \n")
+      escreva("               |xxxxxxx|  _^^^^^_           \n")
+      escreva("               |xxxxxxx| | [][]  |          \n")
+      escreva("            ______xxxxx| |[][][] |          \n")
+      escreva("           |++++++|xxxx| | [][][]|          \n")
+      escreva("           |++++++|xxxx| |[][][] |          \n")
+      escreva("           |++++++|_________ [][]|          \n")
+      escreva("           |++++++|=|=|=|=|=| [] |          \n")
+      escreva("           |++++++|=|=|=|=|=|[][]|          \n")
+      escreva("___________|++HH++|  _HHHH__|   _________   \n")
+      escreva("         _______________   ______________   \n")
+      escreva("==================  ===========    ==========  \n")
 
 
 
@@ -53,6 +53,7 @@ programa
      escreva("  | || .` | | | |   / (_) | \n")
      escreva(" |___|_|\\_| |_| |_|_\\\\___/  \n")
      linha()
+     u.aguarde(1000)
      escreva("    -Moai era um famoso degustador de vinho, que perdeu sua fama após ser acusado de ser uma farsa. \n   Embora ele tenha uma vida tranquila em sua humilde residencia localizada na Califórnia, \n com o dinheiro que conseguiu na sua epóca de fama. \n   Ele não imaginava que ia ter uma mudança que iria mudar a sua vida completamente. \n")
      linha()
      escreva("PRESSIONE [1] PARA CONTINUAR : ")
@@ -65,6 +66,7 @@ programa
      escreva("  | || .` | | | |   / (_) | \n")
      escreva(" |___|_|\\_| |_| |_|_\\\\___/  \n")
      linha()
+     u.aguarde(1000)
      escreva("   -Certo dia enquanto Moai estava relaxando em sua casa cuidando de sua coleção de vinhos requintados e regando seu jardim de espécies raras. \n  Quando de repente escuta um barulho na cozinha, e vai verificar. \n  Chegando lá ele se depara com uma pessoa que nunca viu na vida com o rosto completamente coberto, \n E antes mesmo que ele possa reagir, ele só escuta um som : BONK! \n E desmaia.\n")
      linha()
      escreva("PRESSIONE [1] PARA CONTINUAR : ")
@@ -83,31 +85,28 @@ programa
      escreva("  \\$$$$$$  \\$$$$$$$   \\$$$$$$  \\$$$$$$$$    \\$$    \\$$$$$$     \\$      \\$$$$$$                   \\$$$$$$   \\$$$$$$  \\$$$$$$$  \\$$   \\$$ \\$$$$$$$$     \\$     \\$$$$$$     \\$     \\$$   \\$$\n \n")
      escreva("(opcional)")
      linha()
+     u.aguarde(1000)
      escreva("PRESSIONE [1] PARA CONTINUAR : ")
      leia(escolhas)
       
      limpa()
      linha()
-
-    escreva("             ___     \n")
-    escreva("        ,-'","'___'","'-. \n")
-    escreva("       .;'","''| |`'","':. \n")
-    escreva("       || | | | | || \n")
-    escreva("       ||_|_|_|_|_|| \n")
-    escreva("      //          /| \n")
-    escreva("     /__         //| \n")
-    escreva(" ,-'","'___'","'-.    //|| \n")
-    escreva(".;'","''| |`'", "':.  //   \n")
-    escreva("||/| | | | || //    \n")
-    escreva("||_|_|_|_|_||//     \n")
-    escreva("||_________||/      \n")
-    escreva("||         ||       \n")
-    escreva("''         ''     \n")
-
-
-
-
+      escreva("             ___     \n")
+      escreva("        ,-'","'___'","'-. \n")
+      escreva("       .;'","''| |`'","':. \n")
+      escreva("       || | | | | || \n")
+      escreva("       ||_|_|_|_|_|| \n")
+      escreva("      //          /| \n")
+      escreva("     /__         //| \n")
+      escreva(" ,-'","'___'","'-.    //|| \n")
+      escreva(".;'","''| |`'", "':.  //   \n")
+      escreva("||/| | | | || //    \n")
+      escreva("||_|_|_|_|_||//     \n")
+      escreva("||_________||/      \n")
+      escreva("||         ||       \n")
+      escreva("''         ''     \n")
      linha()
+     u.aguarde(1000)
      escreva("  -Após um longo tempo demasiado desmaiado Moai acorda com o frio de um chão gelado. \n Aos poucos recuperando seus sentidos ele tenta compreender a situação em que se encontra e decide analisar os arredores, \n e ele percebe que se encontra numa cela com um conchão mofado e um buraco de fossa ele também percebe que sua cela está com a porta aberta, \n e que tem apenas uma  única luz visivel em um corredor a frente. \n")
      linha()
      escreva("PRESSIONE [1] PARA CONTINUAR : ")
@@ -120,18 +119,20 @@ programa
      escreva(" | (_| (_) |   /   / _|| |) | (_) |   / \n")
      escreva("  \\___\\___/|_|_\\_|_\\___|___/ \\___/|_|_\\ \n")      
      linha()
+     u.aguarde(1000)
      escreva(" -Moai ao chegar no corredor, ele se depara com algo que nunca experenciou antes, \n algo que nínguem!! deveria sofrer, ele se depara com uma cena que o deixa HORRORIZADO!! \n")
      linha()
      escreva("PRESSIOE [1] PARA CONTINUAR : ")
      leia(escolhas)
      limpa()
 
-    linha()
+      linha()
      escreva("___ ___  ___ ___ ___ ___   ___  ___ \n")
      escreva("  / __/ _ \\| _ \\ _ \\ __|   \\ / _ \\| _ \\ \n")
      escreva(" | (_| (_) |   /   / _|| |) | (_) |   / \n")
      escreva("  \\___\\___/|_|_\\_|_\\___|___/ \\___/|_|_\\ \n")      
      linha()
+     u.aguarde(1000)
 
        escreva("                           ,--.             \n")
        escreva("                          {    }            \n")
@@ -159,21 +160,13 @@ programa
        escreva("         `-(_            )                  \n")
        escreva("             ^^\\..___,.--`             \n")
        linha()
+       u.aguarde(1000)
        escreva("PRESSIONE [1] PARA CONTINUAR : ")
        leia(escolhas)
 
 	
 		
 	}
-	//funcao investiga(){
-		
-	 
-	//funcao atack(){
-		
-	 
-	//funcao item(){
-		
-	 
 	funcao linha(){ // TRAÇA UMA LINHA
 		escreva("=============================================================================================================================================================================================\n")
     
