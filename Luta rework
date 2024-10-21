@@ -1,1 +1,35 @@
+programa {
 
+   inclua biblioteca Util --> u
+
+   inteiro vida_j = 100 , vida_j_max = 100 , vida_b1_max = 100 , vida_b1 = 100 , vida_b2 = 1000 , vida_b2_max = 1000
+    
+   cadeia boss1 = "Magnata" , boss2 = "Cthulhu" , magias[2] = {"Taça de Vinho", "Grimório"}
+
+   inteiro dano_j , dano_b1 , dano_b2
+    
+  
+
+  funcao inicio() {   
+
+    combate(boss1 , vida_b1 , vida_b1)
+
+
+  }
+  funcao combate(cadeia boss , inteiro vida_b , inteiro vida_b_mx){ //Indicar O boss , A vida e A vida máxima dele!!!
+    inteiro acao
+       linha()
+       escreva("┏┓┳┏┓┓┏┏┳┓╻   HP : ", vida_j, "/" , vida_j_max , "  |AÇÕES ---->       [1] ATK |  ", boss, " : " , vida_b , "/" , vida_b_mx,  "\n")
+       escreva("┣ ┃┃┓┣┫ ┃ ┃                 |      ---->       [2] DEF |                \n")
+	     escreva("┻ ┻┗┛┛┗ ┻ •   ATK : " , 10 , " ~ ?? |      ---->       [3] INV |        \n")
+       linha()
+       escreva("ESCOLHA UMA OPÇÃO : ")
+       leia(acao)
+  }
+
+  funcao linha(){
+
+		escreva("=============================================================================================================================================================================================\n")
+
+  }
+}
