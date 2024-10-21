@@ -72,12 +72,14 @@ programa {
         limpa()
     } enquanto (vida_b > 0 e vida_j > 0 )
 
-  se (vida_b <= 0){
+    se (vida_b <= 0){
     escreva(" O BOSS MORREU E FICOU COM : ", vida_b , " DE VIDA \n") 
-  }
-  se(vida_j <= 0 )
-  escreva("O Jogador morreu e ficou com ", vida_j ," de vida,  GAME OVER!!! \n")    
-  }
+    }
+    se(vida_j <= 0 ){
+    escreva("O Jogador morreu e ficou com ", vida_j ," de vida,  GAME OVER!!! \n")    
+    pare
+    }
+  } 
 
   funcao linha(){
 
