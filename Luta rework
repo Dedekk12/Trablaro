@@ -75,7 +75,7 @@ programa {
     escreva(" O BOSS MORREU E FICOU COM : ", vida_b , " DE VIDA \n") 
   }
   se(vida_j <= 0 )
-  escreva("O Jogador morreu e ficou com ", vida_j , " GAME OVER!!! \n")    
+  escreva("O Jogador morreu e ficou com ", vida_j ," de vida,  GAME OVER!!! \n")    
   }
 
   funcao linha(){
