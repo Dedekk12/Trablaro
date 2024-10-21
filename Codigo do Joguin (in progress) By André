@@ -10,7 +10,6 @@ programa
    inteiro vida_inimigo = 100
    inteiro dano_j = 10 //jogado
    inteiro dano_b = 20 // boss
-   inteiro turno  // 0 para jogador, 1 para inimigo
    inteiro escolhas
 	
 
@@ -193,13 +192,13 @@ programa
        limpa()
       
 
-	   linha()
+	    linha()
       escreva("___ ___  ___ ___ ___ ___   ___  ___ \n")
      escreva("  / __/ _ \\| _ \\ _ \\ __|   \\ / _ \\| _ \\ \n")
      escreva(" | (_| (_) |   /   / _|| |) | (_) |   / \n")
      escreva("  \\___\\___/|_|_\\_|_\\___|___/ \\___/|_|_\\ \n")      
      linha()
-     // u.aguarde(1000)
+      // u.aguarde(1000)
       escreva(" -Após Moai ver um corpo completamente decomposto e irreconhecível. \n Ele fica em choque com a cena e tira um tempo pra se recompor, e decide investigar mais ao redor, \n e se depara com com mais corpos no caminho e encontra um ainda que não foi completamente decomposto, \n perto dele havi uma garrafa de vinho quebrada e um bilhete , que tinha algo escrito : \n ")
       escreva("  'AQUELE BABACA FICOU COMPLETAMENTE INSANO!!! ele prendeu a gente aqui só com um vinho estranho, \n algumas pessoas ja até morreram após beberem o vinho, eu não tenho a minima ideia do que ele ta pensando , para deixar até mesmo seus subordinados aqui, \n ele aparecia enquanto todos estavam dormindo e colocava mais uma pessoa e falava como 'Não Serve' , \n EU JA CANSEI DISSO!! , eu vo acabar com isso.' \n")
       linha()
@@ -209,7 +208,7 @@ programa
       leia(escolhas)
       //u.aguarde(100)
       limpa()
-      escreva("___ ___  ___ ___ ___ ___   ___  ___ \n")
+    escreva("___ ___  ___ ___ ___ ___   ___  ___ \n") 
      escreva("  / __/ _ \\| _ \\ _ \\ __|   \\ / _ \\| _ \\ \n")
      escreva(" | (_| (_) |   /   / _|| |) | (_) |   / \n")
      escreva("  \\___\\___/|_|_\\_|_\\___|___/ \\___/|_|_\\ \n")      
@@ -220,7 +219,28 @@ programa
      escreva("PRESSIONE [1] PARA CONTINUAR : ")
      leia(escolhas)
      //u.aguarde(1000)
-     limpa()
+     
+     
+   
+   
+     
+     
+       // u.aguarde(1000)
+     limpa() //MOMENTO DA ESCOLHA FD
+     linha()
+      escreva("_   _ __  __   _       ___ ___  ___ ___  _    _  _   _   _ _ _ \n")
+      escreva("| | | |  \/  | /_\     | __/ __|/ __/ _ \| |  | || | /_\ | | | |\n")
+      escreva("| |_| | |\/| |/ _ \    | _|\__ \ (_| (_) | |__| __ |/ _ \|_|_|_|\n")
+      escreva(" \___/|_|  |_/_/ \_\   |___|___/\___\___/|____|_||_/_/ \_(_|_|_)\n")
+      linha()
+      escreva(" -Após passar horas e horas caminhando em meio a escuridão, \n Moai se ve na necessidade de realizar uma escolha naquele lugar, \n Ele percebe dois caminhos, sem saber do quão grande é esse bunker ele percebe que ele não poder voltar após fazer a sua decisão.  \n")
+      linha()
+      escreva(" -------  SEGUIR PELA ESQUERDA [1]?   ------------  SEGUIR PELA DIREITA [2]? -----------")
+      escreva("ESCOLHA UMA ALTERNATIVA..... : ")
+      leia(escolhas)
+     
+      
+     
 
 		
 	}
