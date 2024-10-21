@@ -37,8 +37,10 @@ programa {
         escolha (acao){ //Em cada opção inclusive a invalida do escolha O Boss Causara "X" dano
 
           caso 1 : 
-          vida_b = vida_b - u.sorteia(10,20)
-          escreva("vida boss : " , vida_b)
+          
+          dano_j = u.sorteia(10,100)
+          vida_b = vida_b - dano_j          
+          escreva("O Boss sofre : ", dano_j , " de dano")
           //atk()
           //Ex : Boss causa "X" dano
           pare
@@ -64,6 +66,8 @@ programa {
         u.aguarde(2000)
         limpa()
     } enquanto (vida_b > 0)
+
+    escreva(" O BOSS MORREU E FICOU COM : ", vida_b , " DE VIDA")     
   }
 
   funcao linha(){
