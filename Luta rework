@@ -12,11 +12,11 @@ programa {
 
   funcao inicio() {   
 
-    combate(boss1 , vida_b1 , vida_b1)
+    combate(boss1 , vida_b1 , vida_b1 , dano_b1)
 
 
   }
-  funcao combate(cadeia boss , inteiro vida_b , inteiro vida_b_mx){ //Indicar O boss , A vida e A vida máxima dele!!!
+  funcao combate(cadeia boss , inteiro vida_b , inteiro vida_b_mx , inteiro dano_b){ //Indicar O boss , A vida , A vida máxima dele e O dano dele 
 
 
     inteiro acao
@@ -40,15 +40,19 @@ programa {
           
           dano_j = u.sorteia(10,100)
           vida_b = vida_b - dano_j          
-          escreva("O Boss sofre : ", dano_j , " de dano")
+          escreva("O Boss sofre : ", dano_j , " de dano \n")
           //atk()
           //Ex : Boss causa "X" dano
+          dano_b = u.sorteia(10,100)
+          vida_j = vida_j - dano_b
+          escreva("O Boss te Ataca E causa : ", dano_b , " de dano \n" )
+
           pare
 
           caso 2 : 
           //def() 
           //Ex : Boss causa "X" dano
-          escreva("defesa")         
+          escreva("defesa \n")         
           pare
 
           caso 3 :
@@ -58,7 +62,7 @@ programa {
           pare
 
           caso contrario : 
-          escreva("!! OPÇÃO INVALIDA RETORNE !!")
+          escreva("!! OPÇÃO INVALIDA RETORNE !! \n ")
           //Ex : Boss causa "X" dano
           
           
@@ -67,7 +71,11 @@ programa {
         limpa()
     } enquanto (vida_b > 0)
 
-    escreva(" O BOSS MORREU E FICOU COM : ", vida_b , " DE VIDA")     
+  se (vida_b <= 0){
+    escreva(" O BOSS MORREU E FICOU COM : ", vida_b , " DE VIDA \n") 
+  }
+  se(vida_j <= 0 )
+  escreva("O Jogador morreu e ficou com ", vida_j , " GAME OVER!!! \n")    
   }
 
   funcao linha(){
