@@ -4,7 +4,7 @@ programa {
 
    inteiro vida_j = 100 , vida_j_max = 100 , vida_b1_max = 100 , vida_b1 = 100 , vida_b2 = 1000 , vida_b2_max = 1000
     
-   cadeia boss1 = "Magnata" , boss2 = "Cthulhu" , magias[2] = {"Taça de Vinho", "Grimório"}
+   cadeia boss1 = "Magnata" , boss2 = "Cthulhu" , magias[2] 
 
    inteiro dano_j , dano_b1 , dano_b2
     
@@ -17,7 +17,15 @@ programa {
 
   }
   funcao combate(cadeia boss , inteiro vida_b , inteiro vida_b_mx){ //Indicar O boss , A vida e A vida máxima dele!!!
+
+
     inteiro acao
+
+
+    faca
+    {
+
+    
        linha()
        escreva("┏┓┳┏┓┓┏┏┳┓╻   HP : ", vida_j, "/" , vida_j_max , "  |AÇÕES ---->       [1] ATK |  ", boss, " : " , vida_b , "/" , vida_b_mx,  "\n")
        escreva("┣ ┃┃┓┣┫ ┃ ┃                 |      ---->       [2] DEF |                \n")
@@ -25,6 +33,37 @@ programa {
        linha()
        escreva("ESCOLHA UMA OPÇÃO : ")
        leia(acao)
+
+        escolha (acao){ //Em cada opção inclusive a invalida do escolha O Boss Causara "X" dano
+
+          caso 1 : 
+          vida_b = vida_b - u.sorteia(10,20)
+          escreva("vida boss : " , vida_b)
+          //atk()
+          //Ex : Boss causa "X" dano
+          pare
+
+          caso 2 : 
+          //def() 
+          //Ex : Boss causa "X" dano
+          escreva("defesa")         
+          pare
+
+          caso 3 :
+          //inv()
+          //Ex : Boss causa "X" dano
+          escreva("inventario")
+          pare
+
+          caso contrario : 
+          escreva("!! OPÇÃO INVALIDA RETORNE !!")
+          //Ex : Boss causa "X" dano
+          
+          
+        }
+        u.aguarde(2000)
+        limpa()
+    } enquanto (vida_b > 0)
   }
 
   funcao linha(){
