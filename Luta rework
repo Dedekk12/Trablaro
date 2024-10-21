@@ -13,14 +13,15 @@ programa {
   funcao inicio() {   
 
     combate(boss1 , vida_b1 , vida_b1 , dano_b1)
-
+    combate(boss2 , vida_b2 , vida_b2 , dano_b2)
 
   }
   funcao combate(cadeia boss , inteiro vida_b , inteiro vida_b_mx , inteiro dano_b){ //Indicar O boss , A vida , A vida máxima dele e O dano dele 
 
-
+      u.aguarde(1000)
+      limpa()   
     inteiro acao
-
+    vida_j = 100
 
     faca
     {
@@ -38,7 +39,7 @@ programa {
 
           caso 1 : 
           
-          dano_j = u.sorteia(10,100)
+          dano_j = u.sorteia(1,100)
           vida_b = vida_b - dano_j          
           escreva("O Boss sofre : ", dano_j , " de dano \n")
           //atk()
@@ -69,7 +70,7 @@ programa {
         }
         u.aguarde(2000)
         limpa()
-    } enquanto (vida_b > 0)
+    } enquanto (vida_b > 0 e vida_j > 0 )
 
   se (vida_b <= 0){
     escreva(" O BOSS MORREU E FICOU COM : ", vida_b , " DE VIDA \n") 
