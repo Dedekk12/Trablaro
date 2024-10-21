@@ -77,7 +77,7 @@ programa {
     }
     se(vida_j <= 0 ){
     escreva("O Jogador morreu e ficou com ", vida_j ," de vida,  GAME OVER!!! \n")    
-    pare
+    
     }
   } 
 
