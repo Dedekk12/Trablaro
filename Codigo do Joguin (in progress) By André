@@ -226,12 +226,13 @@ programa
      
      
        // u.aguarde(1000)
-     limpa() //MOMENTO DA ESCOLHA FD
+    limpa() //MOMENTO DA ESCOLHA FD
      linha()
-      escreva("_   _ __  __   _       ___ ___  ___ ___  _    _  _   _   _ _ _ \n")
-      escreva("| | | |  \/  | /_\     | __/ __|/ __/ _ \| |  | || | /_\ | | | |\n")
-      escreva("| |_| | |\/| |/ _ \    | _|\__ \ (_| (_) | |__| __ |/ _ \|_|_|_|\n")
-      escreva(" \___/|_|  |_/_/ \_\   |___|___/\___\___/|____|_||_/_/ \_(_|_|_)\n")
+       escreva("_   _ __  __    _       ___ ___  ___ ___  _    _  _   _   _ _ _ \n")
+      escreva("| | | |  \\/  | /_\\     | __/ __|/ __/ _ \\| |  | || | /_\\ | | | |\n")
+      escreva("| |_| | |\\/| |/ _ \\    | _|\\__ \\ (_| (_) | |__| __ |/ _ \\|_|_|_|\n")
+      escreva(" \\___/|_|  |_/_/ \\_\\   |___|___/\\___\\___/|____|_||_/_/ \\_(_|_|_)\n")
+
       linha()
       escreva(" -Após passar horas e horas caminhando em meio a escuridão, \n Moai se ve na necessidade de realizar uma escolha naquele lugar, \n Ele percebe dois caminhos, sem saber do quão grande é esse bunker ele percebe que ele não poder voltar após fazer a sua decisão.  \n")
       linha()
