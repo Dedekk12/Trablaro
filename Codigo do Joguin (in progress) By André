@@ -219,31 +219,36 @@ programa
      escreva("PRESSIONE [1] PARA CONTINUAR : ")
      leia(escolhas)
      //u.aguarde(1000)
-     
-     
-   
-   
-     
-     
-       // u.aguarde(1000)
-    limpa() //MOMENTO DA ESCOLHA FD
-     linha()
-       escreva("_   _ __  __    _       ___ ___  ___ ___  _    _  _   _   _ _ _ \n")
-      escreva("| | | |  \\/  | /_\\     | __/ __|/ __/ _ \\| |  | || | /_\\ | | | |\n")
-      escreva("| |_| | |\\/| |/ _ \\    | _|\\__ \\ (_| (_) | |__| __ |/ _ \\|_|_|_|\n")
-      escreva(" \\___/|_|  |_/_/ \\_\\   |___|___/\\___\\___/|____|_||_/_/ \\_(_|_|_)\n")
+     u.aguarde(1000)
 
-      linha()
-      escreva(" -Após passar horas e horas caminhando em meio a escuridão, \n Moai se ve na necessidade de realizar uma escolha naquele lugar, \n Ele percebe dois caminhos, sem saber do quão grande é esse bunker ele percebe que ele não poder voltar após fazer a sua decisão.  \n")
-      linha()
-      escreva(" -------  SEGUIR PELA ESQUERDA [1]?   ------------  SEGUIR PELA DIREITA [2]? -----------")
-      escreva("ESCOLHA UMA ALTERNATIVA..... : ")
-      leia(escolhas)
+    limpa() //MOMENTO DA ESCOLHA FD
+       linha()
+       escreva("_   _ __  __    _       ___ ___  ___ ___  _    _  _   _   _ _ _ \n")
+        escreva("| | | |  \\/  | /_\\     | __/ __|/ __/ _ \\| |  | || | /_\\ | | | |\n")
+        escreva("| |_| | |\\/| |/ _ \\    | _|\\__ \\ (_| (_) | |__| __ |/ _ \\|_|_|_|\n")
+       escreva(" \\___/|_|  |_/_/ \\_\\   |___|___/\\___\\___/|____|_||_/_/ \\_(_|_|_)\n")
+       linha()
+       escreva(" -Após passar horas e horas caminhando em meio a escuridão, \n Moai se ve na necessidade de realizar uma escolha naquele lugar, \n Ele percebe dois caminhos, sem saber do quão grande é esse bunker ele percebe que ele não poder voltar após fazer a sua decisão.  \n")
+        linha()
+       escreva(" -------  SEGUIR PELA ESQUERDA [1]?   ------------  SEGUIR PELA DIREITA [2]? -----------")
+       escreva("ESCOLHA UMA ALTERNATIVA..... : ")
+       leia(escolhas)
      
       
-     
+       escolha (escolhas)
+        {
+         caso 1 :
+          
+          escreva("FINAL BOM TU TA VIVO !!!")//AQUI VAI TA A FUNÇÃO QUE VAI DA NO FINAL BOM
+          pare
+         caso 2 : 
+          
+          escreva("FINAL RUIM TU FICO PRESO!!!")//AQUI VAI TA A FUNÇÃO QUE VAI DA NO FINAL RUIM
+           pare
+         caso contrario : 
+          escreva("opção invalida")
 
-		
+        }   		
 	}
 	funcao linha(){ // TRAÇA UMA LINHA
 		escreva("=============================================================================================================================================================================================\n")
