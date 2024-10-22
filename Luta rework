@@ -12,7 +12,10 @@ programa {
 
   funcao inicio() {   
 
-    combate(boss1 , vida_b1 , vida_b1 , dano_b1)
+    magias[0] = "Taça de vinho"
+    magias[1] = "Grimório"
+
+    combate(boss1 , vida_b1 , vida_b1_max , dano_b1)
     
 
   }
@@ -59,9 +62,13 @@ programa {
           pare
 
           caso 3 :
-          //inv()
-          //Ex : Boss causa "X" dano
-          escreva("inventario")
+          inv(magias)
+
+          u.aguarde(1000)
+          dano_b = u.sorteia(20,80)
+          vida_j = vida_j - (dano_b)
+          escreva("O Boss te Ataca E causa : ", dano_b , " de dano \n" )
+          
           pare
 
           caso contrario : 
@@ -82,6 +89,59 @@ programa {
     
     }
   } 
+  funcao inv(cadeia magia[]){
+
+    inteiro magic
+    inteiro cura = 50
+     
+        linha()
+        escreva(" _  _  _  _ _  ___  _  _  ___  _   ___ _  _          | SUAS MAGIAS : \n")
+        escreva("| || \\| || | || __|| \\| ||_ _|/ \\ | o \\ |/ \\         | 1- ", magias[0] , "\n")
+        escreva("| || \\\\ || V || _| | \\\\ | | || o ||   / ( o )        |  \n")
+        escreva("|_||_|\\_| \\_/ |___||_|\\_| |_||_n_||_|\\\\_|\\_/         | 2- ", magias[1], "\n")
+        linha()
+        escreva("ESCOLHA UMA OPÇÃO : ")
+        leia(magic)
+
+        escolha(magic)
+        {
+            caso 1 : 
+                       
+             se (magia[0] == "Taça de vinho" ){
+
+                se(vida_j + cura > vida_j_max) 
+                  {
+                    cura = vida_j_max - vida_j
+                     vida_j +=  cura
+                    }senao{
+                        
+                      vida_j += cura
+
+                  }
+                escreva("Você se sente Revigorado e cura ", cura , " de Hp \n")
+                
+
+              }
+       
+            pare
+
+            caso 2 : 
+
+            escreva("grimorio")
+              se (magia[1] == "Grimório") {
+
+                grimorio()
+
+              } 
+          
+            pare
+
+            caso contrario : 
+            escreva("opção invalida, mas ainda será considerada e você tomara dano!!!")
+
+        }
+    
+  }
 
   funcao linha(){
 
