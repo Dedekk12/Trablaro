@@ -2,80 +2,126 @@ programa {
 
    inclua biblioteca Util --> u
 
-   inteiro vida_j = 100 , vida_j_max = 100 , vida_b1_max = 100 , vida_b1 = 100 , vida_b2 = 1000 , vida_b2_max = 1000
-    
+   inteiro vida_j = 100 , vida_j_max = 100 , vida_b , vida_b_mx
+
    cadeia boss1 = "Magnata" , boss2 = "Cthulhu" , magias[2] 
 
-   inteiro dano_j , dano_b1 , dano_b2
-    
-  
+   inteiro dano_j , dano_b = 0
+
+
 
   funcao inicio() {   
 
     magias[0] = "Taça de vinho"
     magias[1] = "Grimório"
 
-    combate(boss1 , vida_b1 , vida_b1_max , dano_b1)
-    
+    combate(boss2)
+
 
   }
-  funcao combate(cadeia boss , inteiro vida_b , inteiro vida_b_mx , inteiro dano_b){ //Indicar O boss , A vida , A vida máxima dele e O dano dele 
+  funcao combate(cadeia boss){ //Indicar O boss , A vida , A vida máxima dele e O dano dele 
 
-      u.aguarde(1000)
-      limpa()   
+
+      //u.aguarde(1000)
+    //  limpa()   
     inteiro acao
+
     vida_j = 100
+
+    se(boss == boss1)
+    {
+      vida_b = 100
+      vida_b_mx = 100
+
+    } senao se (boss == boss2)
+    {
+
+      vida_j = 200
+      vida_j_max = 200
+      vida_b = 1000
+      vida_b_mx = 1000
+
+    }
 
     faca
     {
 
-    
+
        linha()
        escreva("┏┓┳┏┓┓┏┏┳┓╻   HP : ", vida_j, "/" , vida_j_max , "  |AÇÕES ---->       [1] ATK | INIMIGO ----->        | ", boss, " [" , vida_b , "/" , vida_b_mx,  "]\n")
        escreva("┣ ┃┃┓┣┫ ┃ ┃                 |AÇÕES ---->       [2] DEF | INIMIGO ----->        | ATK [20 ~ ??]          \n")
-	     escreva("┻ ┻┗┛┛┗ ┻ •   ATK : " , 10 , " ~ ", 30 , " |AÇÕES ---->       [3] INV | INIMIGO ----->        |      \n")
+	     escreva("┻ ┻┗┛┛┗ ┻ •   ATK : " , 10 , " ~ ", 100 , " |AÇÕES ---->       [3] INV | INIMIGO ----->        |      \n")
        linha()
        escreva("ESCOLHA UMA OPÇÃO : ")
        leia(acao)
 
-        escolha (acao){ //Em cada opção inclusive a invalida do escolha O Boss Causara "X" dano
+       escolha (acao){ //Em cada opção inclusive a invalida do escolha O Boss Causara "X" dano
 
-          caso 1 : 
-          
+        caso 1 : 
+
           dano_j = u.sorteia(10,100)
           vida_b = vida_b - dano_j          
           escreva("O Boss sofre : ", dano_j , " de dano \n")
           //atk()
           //Ex : Boss causa "X" dano
-          dano_b = u.sorteia(30,100)
+          se (boss == boss1 ){
+
+            dano_b = u.sorteia(20,80)
+
+          }senao se(boss == boss2){
+
+            dano_b = u.sorteia(30,100)
+
+          }
+
           vida_j = vida_j - dano_b
           escreva("O Boss te Ataca E causa : ", dano_b , " de dano \n" )
 
           pare
 
-          caso 2 : 
+        caso 2 : 
           //def() 
           //Ex : Boss causa "X" dano
-          dano_b = u.sorteia(20,80)
+
+          se (boss == boss1 ){
+
+            dano_b = u.sorteia(20,80)
+
+          }senao se(boss == boss2){
+
+            dano_b = u.sorteia(30,100)
+
+          }
+
           vida_j = vida_j - (dano_b/2)
           escreva("defesa dimuiu o dano do Boss você recebeu : ", dano_b/2 ," de dano \n")         
           pare
 
-          caso 3 :
+        caso 3 :
           inv(magias)
 
-          u.aguarde(1000)
-          dano_b = u.sorteia(20,80)
-          vida_j = vida_j - (dano_b)
-          escreva("O Boss te Ataca E causa : ", dano_b , " de dano \n" )
-          
-          pare
+            u.aguarde(1000)
 
-          caso contrario : 
-          escreva("!! OPÇÃO INVALIDA RETORNE !! \n ")
-          //Ex : Boss causa "X" dano
-          
-          
+           se (boss == boss1 ){
+
+              dano_b = u.sorteia(20,80)
+
+           }senao se(boss == boss2){
+
+              dano_b = u.sorteia(30,100)
+
+           }
+
+            vida_j = vida_j - (dano_b)
+            escreva("O Boss te Ataca E causa : ", dano_b , " de dano \n" )
+
+            pare
+
+            caso contrario : 
+            escreva("!! OPÇÃO INVALIDA RETORNE !! \n ")
+            //Ex : Boss causa "X" dano
+
+
         }
         u.aguarde(2000)
         limpa()
@@ -86,14 +132,15 @@ programa {
     } senao
     se(vida_j <= 0 ){
     escreva("O Jogador morreu e ficou com ", vida_j ," de vida,  GAME OVER!!! \n")    
-    
+
     }
   } 
   funcao inv(cadeia magia[]){
 
+    inteiro penalidade
     inteiro magic
     inteiro cura = 50
-     
+
         linha()
         escreva(" _  _  _  _ _  ___  _  _  ___  _   ___ _  _          | SUAS MAGIAS : \n")
         escreva("| || \\| || | || __|| \\| ||_ _|/ \\ | o \\ |/ \\         | 1- ", magias[0] , "\n")
@@ -106,7 +153,7 @@ programa {
         escolha(magic)
         {
             caso 1 : 
-                       
+
              se (magia[0] == "Taça de vinho" ){
 
                 se(vida_j + cura > vida_j_max) 
@@ -114,34 +161,68 @@ programa {
                     cura = vida_j_max - vida_j
                      vida_j +=  cura
                     }senao{
-                        
+
                       vida_j += cura
 
                   }
                 escreva("Você se sente Revigorado e cura ", cura , " de Hp \n")
-                
+
 
               }
-       
+
             pare
 
             caso 2 : 
 
-            escreva("grimorio")
+
               se (magia[1] == "Grimório") {
 
+
                 grimorio()
+                escreva("Uma energia estranha emana do grimório afetando tanto você quanto o inimigo \n")
+
+                penalidade = u.sorteia(10,25)
+                vida_j = vida_j - u.sorteia(10,50)
+                dano_j = u.sorteia(400,800)
+                vida_b = vida_b - dano_j
+                escreva("Você sofreu um penalidade e perdeu ", penalidade , " de Hp , mais causou ", dano_j , " de dano no inimigo \n")
+
+
 
               } 
-          
+
             pare
 
             caso contrario : 
             escreva("opção invalida, mas ainda será considerada e você tomara dano!!!")
 
         }
-    
+
   }
+
+  funcao grimorio(){ //Desenha o lIvro do "Grimorio"
+
+   u.aguarde(1000)
+   linha()
+    escreva("  ############################################    \n")
+    escreva("########            ##########        ##########  \n")
+    escreva("####                  ####                  ####  \n")
+    escreva("####    ##########    ####    ##########    ####  \n")
+    escreva("####  ##############  ####  ##############  ####  \n")
+    escreva("####                  ####                  ####  \n")
+    escreva("####    ##########    ####    ##########    ####  \n")
+    escreva("####  ##############  ####  ##############  ####  \n")
+    escreva("####                  ####                  ####  \n")
+    escreva("####    ##########    ####    ##########    ####  \n")
+    escreva("####  ##############  ####  ##############  ####  \n")
+    escreva("####                  ####                  ####  \n")
+    escreva("####                  ####                  ####  \n")
+    escreva("####  ##########################################  \n")
+    escreva("################################################  \n")
+    escreva("############          ####          ############  \n")
+    linha()
+
+   }
 
   funcao linha(){
 
