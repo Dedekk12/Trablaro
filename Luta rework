@@ -48,8 +48,8 @@ programa {
 
 
        linha()
-       escreva("┏┓┳┏┓┓┏┏┳┓╻   HP : ", vida_j, "/" , vida_j_max , "  |AÇÕES ---->       [1] ATK | INIMIGO ----->        | ", boss, " [" , vida_b , "/" , vida_b_mx,  "]\n")
-       escreva("┣ ┃┃┓┣┫ ┃ ┃                 |AÇÕES ---->       [2] DEF | INIMIGO ----->        | ATK [20 ~ ??]          \n")
+       escreva("┏┓┳┏┓┓┏┏┳┓╻   HP : ", vida_j, "/" , vida_j_max , "   |AÇÕES ---->       [1] ATK | INIMIGO ----->        | ", boss, " [" , vida_b , "/" , vida_b_mx,  "]\n")
+       escreva("┣ ┃┃┓┣┫ ┃ ┃                  |AÇÕES ---->       [2] DEF | INIMIGO ----->        | ATK [20 ~ ??]          \n")
 	     escreva("┻ ┻┗┛┛┗ ┻ •   ATK : " , 10 , " ~ ", 100 , " |AÇÕES ---->       [3] INV | INIMIGO ----->        |      \n")
        linha()
        escreva("ESCOLHA UMA OPÇÃO : ")
