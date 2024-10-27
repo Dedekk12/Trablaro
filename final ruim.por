@@ -4,18 +4,16 @@ programa
   inclua biblioteca Util --> u
   inclua biblioteca Matematica --> m
 
-   inteiro vida_jogador_max = 100
-   inteiro vida_jogador = 10
-   inteiro vida_inimigo_max = 100
-   inteiro vida_inimigo = 100
-   inteiro dano_j = 10 //jogado
-   inteiro dano_b = 20 // boss
-   inteiro escolhas
+   inteiro vida_j = 100 , vida_j_max = 100 , vida_b , vida_b_mx, escolhas
 
+   cadeia boss1 = "Magnata" , boss2 = "Cthulhu", magias[3]
+
+   inteiro dano_j , dano_b = 0
 
 
 	funcao inicio()
 	{
+    
 
 		linha()// MENU INICIAL
       escreva("___ ___ ___  _   _ ___ ___ _____ ___  ___    ___   ___    __  __  ___   _   ___ \n")
@@ -242,16 +240,260 @@ programa
           escreva("FINAL BOM TU TA VIVO !!!")//AQUI VAI TA A FUNÇÃO QUE VAI DA NO FINAL BOM
           pare
          caso 2 : 
-           direita_mal()
-          escreva("FINAL RUIM TU FICO PRESO!!!")//AQUI VAI TA A FUNÇÃO QUE VAI DA NO FINAL RUIM
+          direita_mal()
+          escreva("FINAL RUIM TU FICO PRESO!!!")
            pare
          caso contrario : 
           escreva("opção invalida")
 
-        }        		
+        }   		
 	}
-  funcao direita_mal(){//caminho pro fimal ruim
+  funcao combate(cadeia boss){ //Indicar O boss , A vida , A vida máxima dele e O dano dele 
 
+
+      //u.aguarde(1000)
+    //  limpa()   
+    inteiro acao
+
+    vida_j = 100
+
+    se(boss == boss1)
+    {
+      vida_b = 100
+      vida_b_mx = 100
+         se(vida_j <= 0 ){
+    escreva("O Jogador morreu e ficou com ", vida_j ," de vida,  GAME OVER!!! \n") 
+    escreva(" PRESSIONE [1] PARA RETORNAR")
+    leia(escolhas)
+    inicio()
+
+    }
+
+    } senao se (boss == boss2)
+    {
+
+      vida_j = 200
+      vida_j_max = 200
+      vida_b = 1000
+      vida_b_mx = 1000
+         se(vida_j <= 0 ){
+    fin_mal()
+    escreva(" PRESSIONE [1] PARA RETORNAR")
+    leia(escolhas)
+    inicio()
+
+    }
+    }
+
+    faca
+    {
+
+
+       linha()
+       escreva("┏┓┳┏┓┓┏┏┳┓╻   HP : ", vida_j, "/" , vida_j_max , "   |AÇÕES ---->       [1] ATK | INIMIGO ----->        | ", boss, " [" , vida_b , "/" , vida_b_mx,  "]\n")
+       escreva("┣ ┃┃┓┣┫ ┃ ┃                  |AÇÕES ---->       [2] DEF | INIMIGO ----->        | ATK [20 ~ ??]          \n")
+	     escreva("┻ ┻┗┛┛┗ ┻ •   ATK : " , 10 , " ~ ", 100 , " |AÇÕES ---->       [3] INV | INIMIGO ----->        |      \n")
+       linha()
+       escreva("ESCOLHA UMA OPÇÃO : ")
+       leia(acao)
+
+       escolha (acao){ //Em cada opção inclusive a invalida do escolha O Boss Causara "X" dano
+
+        caso 1 : 
+
+          dano_j = u.sorteia(10,100)
+          vida_b = vida_b - dano_j          
+          escreva("O Boss sofre : ", dano_j , " de dano \n")
+          //atk()
+          //Ex : Boss causa "X" dano
+          se (boss == boss1 ){
+
+            dano_b = u.sorteia(20,80)
+
+          }senao se(boss == boss2){
+
+            dano_b = u.sorteia(30,100)
+
+          }
+
+          vida_j = vida_j - dano_b
+          escreva("O Boss te Ataca E causa : ", dano_b , " de dano \n" )
+
+          pare
+
+        caso 2 : 
+          //def() 
+          //Ex : Boss causa "X" dano
+
+          se (boss == boss1 ){
+
+            dano_b = u.sorteia(20,60)
+
+          }senao se(boss == boss2){
+
+            dano_b = u.sorteia(30,90)
+
+          }
+
+          vida_j = vida_j - (dano_b/2)
+          escreva("defesa dimuiu o dano do Boss você recebeu : ", dano_b/2 ," de dano \n")         
+          pare
+
+        caso 3 :
+          inv(magias)
+
+            u.aguarde(1000)
+
+           se (boss == boss1 ){
+
+              dano_b = u.sorteia(20,80)
+
+           }senao se(boss == boss2){
+
+              dano_b = u.sorteia(30,100)
+
+           }
+
+            vida_j = vida_j - (dano_b)
+            escreva("O Boss te Ataca E causa : ", dano_b , " de dano \n" )
+
+            pare
+
+            caso contrario : 
+            escreva("!! OPÇÃO INVALIDA RETORNE !! \n ")
+            //Ex : Boss causa "X" dano
+
+
+        }
+        u.aguarde(2000)
+        limpa()
+    } enquanto (vida_b > 0 e vida_j > 0 )
+
+    se (vida_b <= 0){
+    escreva(" O BOSS MORREU E FICOU COM : ", vida_b , " DE VIDA \n") 
+    } 
+  } 
+  funcao inv(cadeia magia[]){
+
+    inteiro penalidade
+    inteiro magic
+    inteiro cura = 50 , cura2 = 25
+
+        linha()
+        escreva(" _  _  _  _ _  ___  _  _  ___  _   ___ _  _          | SUAS MAGIAS : \n")
+        escreva("| || \\| || | || __|| \\| ||_ _|/ \\ | o \\ |/ \\         | 1- ", magias[0],  "\n")
+        escreva("| || \\\\ || V || _| | \\\\ | | || o ||   / ( o )        | 2- ", magias[1],  "\n")
+        escreva("|_||_|\\_| \\_/ |___||_|\\_| |_||_n_||_|\\\\_|\\_/         | 3- ", magias[2],  "\n")
+        linha()
+        escreva("ESCOLHA UMA OPÇÃO : ")
+        leia(magic)
+
+        escolha(magic)
+        {
+            caso 1 : 
+
+             se (magia[0] == "Taça de vinho" ){
+
+                se(vida_j + cura > vida_j_max) 
+                  {
+                    cura = vida_j_max - vida_j
+                     vida_j +=  cura
+                    }senao{
+
+                      vida_j += cura
+
+                  }
+                escreva("Você se sente Revigorado e cura ", cura , " de Hp \n")
+
+
+              }
+              senao{
+
+			escreva("espaço vazio = vazio \n")
+              	
+              }
+
+            pare
+
+            caso 2 : 
+
+
+              se (magia[1] == "Grimório") {
+
+
+                grimorio()
+                escreva("Uma energia estranha emana do grimório afetando tanto você quanto o inimigo \n")
+
+                penalidade = u.sorteia(10,25)
+                vida_j = vida_j - u.sorteia(10,50)
+                dano_j = u.sorteia(400,800)
+                vida_b = vida_b - dano_j
+                escreva("Você sofreu um penalidade e perdeu ", penalidade , " de Hp , mais causou ", dano_j , " de dano no inimigo \n")
+
+              } 
+              senao {
+
+			escreva("Você não tem nada = vazio \n")
+              	
+              }
+
+            pare 
+
+             caso 3 : 
+
+             se (magia[2] == "Copo de Whiskey"){
+
+                se(vida_j + cura2 > vida_j_max) 
+                  {
+                    cura = vida_j_max - vida_j
+                     vida_j +=  cura2
+                    }senao{
+
+                      vida_j += cura2
+
+                  }
+                escreva("Você se sente enojado mas também cura ", cura2 , " de Hp \n")
+             }
+             senao{
+
+			escreva("perdeu = vazio \n")
+             }
+
+            pare
+
+            caso contrario : 
+            escreva("opção invalida, mas ainda será considerada e você tomara dano!!!")
+
+        }
+
+  }
+  
+	funcao linha(){ // TRAÇA UMA LINHA
+		escreva("=============================================================================================================================================================================================\n")
+
+	  }
+  funcao grimorio(){ //Desenha o lIvro do "Grimorio"
+
+    escreva("  ############################################    \n")
+    escreva("########            ##########        ##########  \n")
+    escreva("####                  ####                  ####  \n")
+    escreva("####    ##########    ####    ##########    ####  \n")
+    escreva("####  ##############  ####  ##############  ####  \n")
+    escreva("####                  ####                  ####  \n")
+    escreva("####    ##########    ####    ##########    ####  \n")
+    escreva("####  ##############  ####  ##############  ####  \n")
+    escreva("####                  ####                  ####  \n")
+    escreva("####    ##########    ####    ##########    ####  \n")
+    escreva("####  ##############  ####  ##############  ####  \n")
+    escreva("####                  ####                  ####  \n")
+    escreva("####                  ####                  ####  \n")
+    escreva("####  ##########################################  \n")
+    escreva("################################################  \n")
+    escreva("############          ####          ############  \n")
+
+   }
+  funcao direita_mal(){//caminho pro fimal ruim
+    
     limpa()
     linha()
     escreva("  ______  _____  _____ _____  _____ _______ __  _____  _____ ____  \n")
@@ -264,7 +506,7 @@ programa
 
     escreva(" -Após tomar sua decisão, Moai decide seguir pelo caminho da direita. \n No final do corredor escuro, encontra uma porta e ao abri-la. \n Ele encontra um escritório completamente destruído. \n")
     linha()
-    escreva("PRESSIONE [1] PARA CONTIUNAR : 1")
+    escreva("PRESSIONE [1] PARA CONTIUNAR : ")
     leia(escolhas)
     limpa()
     
@@ -309,7 +551,7 @@ programa
    escreva(" |_____/_/    \\_\\______/_/    \\_\\ |______|_____/   |_|  |_|  \\_\\/_/    \\_\\_| \\_|_|  |_/_/    \\_\\\n")
    linha()
 
-   escreva(" -A sala estava repleta de símbolos estranhos, mas ao olhar em direção da trilha de sangue, seu corpo congelou. \n Havia uma pilha de corpos dentro so que parecia ser um círculo de ritual. \n E desenhando esse círculo, estava um robô gigante, ue parecia não ter notado sua presença ainda.")
+   escreva(" -A sala estava repleta de símbolos estranhos, mas ao olhar em direção da trilha de sangue, seu corpo congelou. \n Havia uma pilha de corpos dentro so que parecia ser um círculo de ritual. \n E desenhando esse círculo, estava um robô gigante, que parecia não ter notado sua presença ainda. \n E tudo isso a frente do que parecia ser a saída, um deck com uma lancha")
    linha()
    escreva("PRESSIONE [1] PARA CONTINUAR : ")
    leia(escolhas)
@@ -324,39 +566,80 @@ programa
    escreva(" |_____/_/    \\_\\______/_/    \\_\\ |______|_____/   |_|  |_|  \\_\\/_/    \\_\\_| \\_|_|  |_/_/    \\_\\\n")
    linha()
 
-   escreva(" -Mas ao tentar se aproximar mais, o robô nota sua presença. \n Se virando para ele e dizendo: \n Olha só quem apareceu? Se não é MOAI, o famoso degustador de vinhos. Eu estava pensando que todos já estavam mortos, mas parece ue a peça restante veio até mim. Mas não fique triste, pois sua vida servirá a um nobre propósito. Agora SUCUMBA!!!")
+   escreva(" -Mas ao tentar se aproximar mais, o robô nota sua presença. \n Se virando para ele e dizendo: \n Olha só quem apareceu? Se não é MOAI, o famoso degustador de vinhos. Eu estava pensando que todos já estavam mortos, mas parece ue a peça restante veio até mim. Mas não fique triste, pois sua vida servirá a um nobre propósito. Agora SUCUMBA!!! \n")
    linha()
    escreva("PRESSIONE [1] PARA CONTINUAR : ")
    leia(escolhas)
    limpa()
-   //comeca o combate
-   //termina o combate
+   
+   combate(boss1)
+   limpa()
 
+   linha()
+   escreva("   _____         _                 ______  _____ _______ _____            _   _ _    _          \n")
+   escreva("  / ____|  /\\   | |        /\\     |  ____|/ ____|__   __|  __ \\     /\\   | \\ | | |  | |   /\\    \n")
+   escreva(" | (___   /  \\  | |       /  \\    | |__  | (___    | |  | |__) |   /  \\  |  \\| | |__| |  /  \\   \n")
+   escreva("  \\___ \\ / /\\ \\ | |      / /\\ \\   |  __|  \\___ \\   | |  |  _  /   / /\\ \\ | . ` |  __  | / /\\ \\  \n")
+   escreva("  ____) / ____ \\| |____ / ____ \\  | |____ ____) |  | |  | | \\ \\  / ____ \\| |\\  | |  | |/ ____ \\ \n")
+   escreva(" |_____/_/    \\_\\______/_/    \\_\\ |______|_____/   |_|  |_|  \\_\\/_/    \\_\\_| \\_|_|  |_/_/    \\_\\\n")
+   linha()
+   
+   
+   escreva(" -Logo após derrotar o robô, Moai vai até ele para averiguar quem o estava o controla1ndo. \n E ao olhar para dentro da cabine, ele vê um homem idoso, que estava preso lá, que ao percebe-lo, diz: \n Você pode achar que ganhou de MIM, RODRIGO ESTOMBELY CEPTILES O CHEFE DOS MAGNATAS DO VINHO, mas eu te digo uma coisa, caro degustador, a vontade do mestre NUNCA morre. \n E proferindo essas palavras, Rodrigo se explode dentro da cabine, que arremessa Moai até o deck. \n")
+   linha()
+   escreva("PRESSIONE [1] PARA CONTINUAR : ")
+   leia(escolhas)
+   limpa()
+
+   linha()
+  escreva("   _____      _     \n")
+  escreva("  / ____|    (_)    \n")
+  escreva(" | |     __ _ _ ___ \n")
+  escreva(" | |    / _` | / __|\n")
+  escreva(" | |___| (_| | \\__ \\ \n")
+  escreva("  \\_____\\__,_|_|___/ \n")
+   linha()
    
 
-  }
-	funcao linha(){ // TRAÇA UMA LINHA
-		escreva("=============================================================================================================================================================================================\n")
+   escreva(" -Recobrando seus sentidos, Moai observa o que sobrou do robô, completamente em chamas. \n Mas focando em seu objetivo, ele segue em direção a lancha, quando de repente, ele observa o mar. \n Outrora pacífico, completamente revolto e com uma enorme tempestade se formando. \n No início, nada parece fazer sentido, contudo, ao analizar sua situação, é perceptível. \n Os últimos momentos de Rodrigo não haviam sido em vão, pois com seu sacríficio, seu plano havia se concretizado.")
+   linha()
+   escreva("PRESSIONE [1] PARA CONTINUAR : ")
+   leia(escolhas)
+   limpa()
+   
+    linha()
+   escreva("   _____      _     \n")
+   escreva("  / ____|    (_)    \n")
+   escreva(" | |     __ _ _ ___ \n")
+   escreva(" | |    / _` | / __|\n")
+   escreva(" | |___| (_| | \\__ \\ \n")
+   escreva("  \\_____\\__,_|_|___/ \n")
+   linha()
+   
+   escreva(" -Em suas costas, uma luz irradiava do círculo ritualístico, enquanto uma figura gigantesca emergia do mar a sua frente. \n Percebendo que não sairia daquele lugar com aquela tempestade, Moai decide derrotar a criatura, a causadora de todo aquele mal. \n A criatura possuia proporções gigantescas e tinha a aparência de um híbrido entre um humano com um polvo e um dragão. \n E assim se inicia a batalha. \n")
+   linha()
+   escreva("PRESSIONE [1] PARA CONTINUAR : ")
+   leia(escolhas)
+   limpa()
+   
+   combate(boss2)
+   
+  
+   
+   
+}
+funcao fin_mal(){
+  linha()
+  escreva("  ______ _             _   __ \n")
+  escreva(" |  ____(_)           | | /_ |\n")
+  escreva(" | |__   _ _ __   __ _| |  | |\n")
+  escreva(" |  __| | | '_ \\ / _` | |  | |\n")
+  escreva(" | |    | | | | | (_| | |  | |\n")
+  escreva(" |_|    |_|_| |_|\\__,_|_|  |_|\n")
+  linha()
 
-	  }
-  funcao grimorio(){ //Desenha o lIvro do "Grimorio"
+  escreva(" -Quando a criatura o encara, um arrepio percorre a sua espinha, nesse momento ele percebe, não há nada que possa ser feito. \n Aquela criatura não poderia ser subjulgada de forma alguma, pois com apenas um olhar, Moai estava deitado no chão, abraçando seu joelhos. \n Sua mente havia sido tomada completamente pela loucura, não havia nada além do pensamento da morte iminente misturada com admiração a criatura de poder imensurável. \n Enquanto sua mente mergulhava cada vez mais na loucura, todo o seu corpo, ossos, músculos, cada parte do seu corpo foi se transformando em um lodo verde. \n Até que sua existência foi completamente apagada da realidade. \n E com sua liberdade retomada, a criatura continua sua busca pela exterminação da raça humana, para que assim seu povo adormecido possa retomar sua antiga glória.")
 
-    escreva("  ############################################    \n")
-    escreva("########            ##########        ##########  \n")
-    escreva("####                  ####                  ####  \n")
-    escreva("####    ##########    ####    ##########    ####  \n")
-    escreva("####  ##############  ####  ##############  ####  \n")
-    escreva("####                  ####                  ####  \n")
-    escreva("####    ##########    ####    ##########    ####  \n")
-    escreva("####  ##############  ####  ##############  ####  \n")
-    escreva("####                  ####                  ####  \n")
-    escreva("####    ##########    ####    ##########    ####  \n")
-    escreva("####  ##############  ####  ##############  ####  \n")
-    escreva("####                  ####                  ####  \n")
-    escreva("####                  ####                  ####  \n")
-    escreva("####  ##########################################  \n")
-    escreva("################################################  \n")
-    escreva("############          ####          ############  \n")
 
-   }
+}
 }
