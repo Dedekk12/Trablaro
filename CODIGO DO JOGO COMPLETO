@@ -50,7 +50,7 @@ programa
       escreva(" / _ \\ V / | |\\__ \\ (_) |_|_|_| \n")
       escreva("/_/ \\_\\_/ |___|___/\\___/(_|_|_) \n")
      linha()
-     escreva("  -AS AÇÕES A SEGUIR NO JOGO SÃO IMUTAVEIS! ENTÃO TOME CUIDADO. \n  -E CASO VOCÊ ERRE ALGUMAS ESCOLHA FORA DO COMBATE SEU JOGO SERÁ ENCERRADO, ENTÃO TENHA CERTEZA DE COLOCAR O CARACTERE CORRETO E PRESSIONAR [ENTER]. \n ")
+     escreva("  -AS AÇÕES A SEGUIR NO JOGO SÃO IMUTAVEIS! ENTÃO TOME CUIDADO. \n  -E CASO VOCÊ ERRE ALGUMA ESCOLHA FORA DO COMBATE SEU JOGO SERÁ ENCERRADO, ENTÃO TENHA CERTEZA DE COLOCAR O CARACTERE CORRETO E PRESSIONAR [ENTER]. \n ")
      linha()
      escreva("PRESSIONE [1] PARA CONTINUAR : ")
      leia(escolhas)
@@ -123,7 +123,7 @@ programa
       escreva("''         ''     \n")
      linha()
     // u.aguarde(1000)
-     escreva("  -Após um longo tempo demasiado desmaiado Moai acorda com o frio de um chão gelado. \n Aos poucos recuperando seus sentidos ele tenta compreender a situação em que se encontra e decide analisar os arredores, \n e ele percebe que se encontra numa cela com um conchão mofado e um buraco de fossa ele também percebe que sua cela está com a porta aberta, \n e que tem apenas uma  única luz visivel em um corredor a frente. \n")
+     escreva("  -Após um longo tempo demasiado desmaiado Moai acorda com o frio de um chão gelado. \n Aos poucos recuperando seus sentidos ele tenta compreender a situação em que se encontra e decide analisar os arredores, \n e ele percebe que se encontra numa cela com um colchão mofado e um buraco de fossa ele também percebe que sua cela está com a porta aberta, \n e que tem apenas uma  única luz visivel em um corredor a frente. \n")
      linha()
      escreva("PRESSIONE [1] PARA CONTINUAR : ")
      leia(escolhas)
@@ -139,7 +139,7 @@ programa
      escreva("  \\___\\___/|_|_\\_|_\\___|___/ \\___/|_|_\\ \n")      
      linha()
      // u.aguarde(1000)
-     escreva(" -Moai ao chegar no corredor, ele se depara com algo que nunca experenciou antes, \n algo que nínguem!! deveria sofrer, ele se depara com uma cena que o deixa HORRORIZADO!! \n")
+     escreva(" -Moai ao chegar no corredor, se depara com algo que nunca experenciou antes, \n algo que nínguem!! deveria sofrer, ele se depara com uma cena que o deixa HORRORIZADO!! \n")
      linha()
      escreva("PRESSIOE [1] PARA CONTINUAR : ")
      leia(escolhas)
@@ -195,8 +195,8 @@ programa
      escreva("  \\___\\___/|_|_\\_|_\\___|___/ \\___/|_|_\\ \n")      
      linha()
       // u.aguarde(1000)
-      escreva(" -Após Moai ver um corpo completamente decomposto e irreconhecível. \n Ele fica em choque com a cena e tira um tempo pra se recompor, e decide investigar mais ao redor, \n e se depara com com mais corpos no caminho e encontra um ainda que não foi completamente decomposto, \n perto dele havi uma garrafa de vinho quebrada e um bilhete , que tinha algo escrito : \n ")
-      escreva("  'AQUELE BABACA FICOU COMPLETAMENTE INSANO!!! ele prendeu a gente aqui só com um vinho estranho, \n algumas pessoas ja até morreram após beberem o vinho, eu não tenho a minima ideia do que ele ta pensando , para deixar até mesmo seus subordinados aqui, \n ele aparecia enquanto todos estavam dormindo e colocava mais uma pessoa e falava como 'Não Serve' , \n EU JA CANSEI DISSO!! , eu vo acabar com isso.' \n")
+      escreva(" -Após Moai ver um corpo completamente decomposto e irreconhecível. \n Ele fica em choque com a cena e tira um tempo pra se recompor, decidindo investigar mais ao redor, \n para então se deparar com mais corpos no caminho, até encontrar um  corpo ainda não decomposto completamente, \n perto dele havia uma garrafa de vinho quebrada e um bilhete , que tinha algo escrito : \n ")
+      escreva("  'AQUELE BABACA FICOU COMPLETAMENTE INSANO!!! ele prendeu a gente aqui só com um vinho estranho, \n algumas pessoas ja até morreram após beberem o vinho, eu não tenho a minima ideia do que ele ta pensando , para deixar até mesmo seus subordinados aqui, \n ele aparecia enquanto todos estavam dormindo e colocava mais uma pessoa e falava como 'Não Serve' , \n EU JA CANSEI DISSO!! , eu vou acabar com isso.' \n")
       linha()
       escreva(" ARMA ADQUIRIDA : GARRAFA DE VINHO [ATK (20 ~ 60)] \n ")
       linha()
@@ -210,7 +210,7 @@ programa
      escreva("  \\___\\___/|_|_\\_|_\\___|___/ \\___/|_|_\\ \n")      
      linha()
      // u.aguarde(1000)
-     escreva(" -Ao terminar de ler Moai começa a se questionar a quanto tempo ele está ali, \n e também percebe três caminhos e com duvidas e medos ele continuar a avançar em meio as trevas, \n procurando uma saída desse profundo abismo. \n")
+     escreva(" -Ao terminar de ler, Moai começa a se questionar a quanto tempo ele está ali, \n mas apesar de todo o medo, ele percebe que somente seguindo em frente, encontraria a saída daquele lugar, \n")
      linha()
      escreva("PRESSIONE [1] PARA CONTINUAR : ")
      leia(escolhas)
@@ -224,7 +224,7 @@ programa
         escreva("| |_| | |\\/| |/ _ \\    | _|\\__ \\ (_| (_) | |__| __ |/ _ \\|_|_|_|\n")
        escreva(" \\___/|_|  |_/_/ \\_\\   |___|___/\\___\\___/|____|_||_/_/ \\_(_|_|_)\n")
        linha()
-       escreva(" -Após passar horas e horas caminhando em meio a escuridão, \n Moai se ve na necessidade de realizar uma escolha naquele lugar, \n Ele percebe dois caminhos, sem saber do quão grande é esse bunker ele percebe que ele não poder voltar após fazer a sua decisão.  \n")
+       escreva(" -Após passar horas e horas caminhando em meio a escuridão, \n Moai se ve na necessidade de realizar uma escolha naquele lugar, \n Ele percebe dois caminhos, sem saber quão grande é esse bunker, ele percebe que não poderia voltar após tomar sua decisão.  \n")
         linha()
        escreva(" -------  SEGUIR PELA ESQUERDA [1]?   ------------  SEGUIR PELA DIREITA [2]? -----------")
        escreva("ESCOLHA UMA ALTERNATIVA..... : ")
@@ -413,7 +413,7 @@ programa
                 vida_j = vida_j - penalidade
                 dano_j = u.sorteia(200,400)
                 vida_b = vida_b - dano_j
-                escreva("Você sofreu um penalidade e perdeu ", penalidade , " de Hp , mais causou ", dano_j , " de dano no inimigo \n")
+                escreva("Você sofreu uma penalidade e perdeu ", penalidade , " de Hp , mais causou ", dano_j , " de dano no inimigo \n")
 
               } 
               senao {
@@ -538,7 +538,7 @@ programa
     escreva(" |_____/_/    \\_\\______/_/    \\_\\ |______|_____/   |_|  |_|  \\_\\/_/    \\_\\_| \\_|_|  |_/_/    \\_\\\n")
     linha()
 
-    escreva(" -A sala estava repleta de símbolos estranhos, mas ao olhar em direção da trilha de sangue, seu corpo congelou. \n Havia uma pilha de corpos dentro so que parecia ser um círculo de ritual. \n E desenhando esse círculo, estava um robô gigante, que parecia não ter notado sua presença ainda. \n E tudo isso a frente do que parecia ser a saída, um deck com uma lancha \n")
+    escreva(" -A sala estava repleta de símbolos estranhos, mas ao olhar para onde a trilha de sangue terminava, seu corpo congelou. \n Havia uma pilha de corpos dentro do que parecia ser um círculo ritualístico. \n E desenhando esse círculo, estava um robô gigante, que parecia não ter notado sua presença ainda. \n E tudo isso a frente do que parecia ser a saída, um cais com uma lancha \n")
     linha()
     escreva("PRESSIONE [1] PARA CONTINUAR : ")
     leia(escolhas)
@@ -553,7 +553,7 @@ programa
     escreva(" |_____/_/    \\_\\______/_/    \\_\\ |______|_____/   |_|  |_|  \\_\\/_/    \\_\\_| \\_|_|  |_/_/    \\_\\\n")
     linha()
 
-    escreva(" -Mas ao tentar se aproximar mais, o robô nota sua presença. \n Se virando para ele e dizendo: \n \"Olha só quem apareceu? Se não é MOAI, o famoso degustador de vinhos. Eu estava pensando que todos já estavam mortos, mas parece ue a peça restante veio até mim. Mas não fique triste, pois sua vida servirá a um nobre propósito. Agora SUCUMBA!!! \"\n")
+    escreva(" -Mas ao tentar se aproximar mais, o robô nota sua presença. \n Se virando para ele e dizendo: \n \"Olha só quem apareceu? Se não é MOAI, o famoso degustador de vinhos. Eu estava pensando que todos já estavam mortos, mas parece que a peça restante veio até mim. Mas não fique triste, pois sua vida servirá a um nobre propósito. Agora SUCUMBA!!! \"\n")
     linha()
     escreva("PRESSIONE [1] PARA CONTINUAR : ")
     leia(escolhas)
@@ -572,7 +572,7 @@ programa
     linha()
    
    
-    escreva(" -Logo após derrotar o robô, Moai vai até ele para averiguar quem o estava o controla1ndo. \n E ao olhar para dentro da cabine, ele vê um homem idoso, que estava preso lá, que ao percebe-lo, diz: \n Você pode achar que ganhou de MIM, RODRIGO ESTOMBELY CEPTILES O CHEFE DOS MAGNATAS DO VINHO, mas eu te digo uma coisa, caro degustador, a vontade do mestre NUNCA morre. \n E proferindo essas palavras, Rodrigo se explode dentro da cabine, que arremessa Moai até o deck. \n")
+    escreva(" -Logo após derrotar o robô, Moai vai até ele para averiguar quem o estava controlando. \n E ao olhar para dentro da cabine, ele vê um homem idoso, que estava preso lá, que ao percebe-lo, diz: \n Você pode achar que ganhou de MIM, RODRIGO ESTOMBELY CEPTILES O CHEFE DOS MAGNATAS DO VINHO, mas eu te digo uma coisa, caro degustador, a vontade do mestre NUNCA morre. \n E proferindo essas palavras, Rodrigo se explode dentro da cabine, arremessando Moai até o cais. \n")
     linha()
     escreva("PRESSIONE [1] PARA CONTINUAR : ")
     leia(escolhas)
@@ -588,7 +588,7 @@ programa
     linha()
    
 
-    escreva(" -Recobrando seus sentidos, Moai observa o que sobrou do robô, completamente em chamas. \n Mas focando em seu objetivo, ele segue em direção a lancha, quando de repente, ele observa o mar. \n Outrora pacífico, completamente revolto e com uma enorme tempestade se formando. \n No início, nada parece fazer sentido, contudo, ao analizar sua situação, é perceptível. \n Os últimos momentos de Rodrigo não haviam sido em vão, pois com seu sacríficio, seu plano havia se concretizado. \n")
+    escreva(" -Recobrando seus sentidos, Moai observa o que sobrou do robô, completamente em chamas. \n Mas focando em seu objetivo, ele segue em direção a lancha, quando de repente, ele observa o mar. \n Outrora pacífico, completamente revolto e com uma enorme tempestade se formando. \n No início, nada parece fazer sentido, contudo, ao analizar sua situação, ele percebe. \n Os últimos momentos de Rodrigo não haviam sido em vão, pois com seu sacríficio, seu plano havia se concretizado. \n")
     linha()
     escreva("PRESSIONE [1] PARA CONTINUAR : ")
     leia(escolhas)
@@ -603,7 +603,7 @@ programa
     escreva("  \\_____\\__,_|_|___/ \n")
     linha()
    
-    escreva(" -Em suas costas, uma luz irradiava do círculo ritualístico, enquanto uma figura gigantesca emergia do mar a sua frente. \n Percebendo que não sairia daquele lugar com aquela tempestade, Moai decide derrotar a criatura, a causadora de todo aquele mal. \n A criatura possuia proporções gigantescas e tinha a aparência de um híbrido entre um humano com um polvo e um dragão. \n E assim se inicia a batalha. \n")
+    escreva(" -Atrás dele, uma luz irradiava do círculo ritualístico, enquanto uma figura gigantesca emergia do mar a sua frente. \n Percebendo que não sairia daquele lugar com aquela tempestade, Moai decide derrotar a criatura, a causadora de todo aquele mal. \n A criatura possuia proporções gigantescas e tinha a aparência de um híbrido entre um humano com um polvo e um dragão. \n E assim se inicia a batalha. \n")
     linha()
     escreva("PRESSIONE [1] PARA CONTINUAR : ")
     leia(escolhas)
@@ -626,7 +626,7 @@ programa
         escreva(" |_|    |_|_| |_|\\__,_|_|  |_|\n")
         linha()
 
-        escreva(" -Quando a criatura o encara, um arrepio percorre a sua espinha, nesse momento ele percebe, não há nada que possa ser feito com o poder que ele possui. \n Aquela criatura não poderia ser subjulgada de forma alguma, pois com apenas um olhar, Moai estava deitado no chão, abraçando seu joelhos. \n Sua mente havia sido tomada completamente pela loucura, não havia nada além do pensamento da morte iminente misturada com admiração a criatura de poder imensurável. \n Enquanto sua mente mergulhava cada vez mais na loucura, todo o seu corpo, ossos, músculos, cada parte do seu corpo foi se transformando em um lodo verde. \n Até que sua existência foi completamente apagada da realidade. \n E com sua liberdade retomada, a criatura continua sua busca pela exterminação da raça humana, para que assim seu povo adormecido possa retomar sua antiga glória.")
+        escreva(" -Mas quando a criatura o encara, um arrepio percorre a sua espinha, nesse momento ele percebe, não há nada que possa ser feito com o poder que ele possui. \n Aquela criatura não poderia ser subjulgada de forma alguma, pois com apenas um olhar, Moai estava deitado no chão, abraçando seu joelhos. \n Sua mente havia sido tomada completamente pela loucura, não havia nada além do pensamento da morte iminente misturada com admiração a criatura de poder imensurável. \n Enquanto sua mente mergulhava cada vez mais na loucura, todo o seu corpo, ossos, músculos, cada parte do seu corpo foi se transformando em um lodo verde. \n Até que sua existência foi completamente apagada da realidade. \n E com sua liberdade retomada, a criatura continua sua busca pela exterminação da raça humana, para que assim seu povo adormecido possa retomar sua antiga glória.")
         linha()
         escreva("PRESSIONE [1] PARA CONTINUAR : ")
         leia(escolhas)
@@ -685,7 +685,7 @@ programa
         escreva("                     |___/        \n")
         linha()
         
-        escreva(" -Com a mensagem em mente, Moai procura pela adega em meio aos corredores labirinticos, até que ele finalmente encontra o local. \n A adega era gigante de gôndolas com caixas e mais caixas de garrafas de vinho, com diversas marcas e idades diferentes, mas mesmo impressionado, ele começa a vasculhar a adega. \n Após uma longa busca, ele encontra uma caixa nos confins da sala, ao abri-la ele encontra um bilhete e um vinho estranho. \n Ao analisar o vinho, descobriu que ele era um Xanmargott de 1856, um vinho lendário, conhecido por ser tão bom que possuia propriedades curativas, já o bilhete continha a senha para o grimório.\n ")
+        escreva(" -Com a mensagem em mente, Moai procura pela adega em meio aos corredores labirinticos, até que ele finalmente encontra o local. \n A adega era gigante e cheia de gôndolas com caixas e mais caixas de garrafas de vinho, com diversas marcas e idades diferentes, mas mesmo impressionado, ele começa a vasculhar a adega. \n Após uma longa busca, ele encontra uma caixa nos confins da sala, ao abri-la ele encontra um bilhete e um vinho estranho. \n Ao analisar o vinho, descobriu que ele era um Xanmargott de 1856, um vinho lendário, conhecido por ser tão bom que possuia propriedades curativas, já o bilhete continha a senha da sala segura.\n ")
         linha()
         escreva(" MAGIA ADIQUIRIDA : GARRAFA DE VINHO [ITEM/MAGIA DE CURA] \n")
         magias[0] = "Taça de vinho"
@@ -722,7 +722,7 @@ programa
         escreva("                                  |___/       \n")
         linha()
 
-        escreva(" -Porém, o tentar se aproximar dele, uma voz pode ser ouvida, o notificando. \n \"Por favor, diga a senha de acesso em voz alta, de mais um passo e você será mirado por nossos lazers\". \n Sem pensar duas vezes, Moai diz a senha do bilhete em voz alta, logo após isso, ele escuta um som de confirmação, e então segue para pegar o grimório. \n ")
+        escreva(" -Porém, o tentar se aproximar dele, uma voz pode ser ouvida, o notificando. \n \"Por favor, diga a senha de acesso em voz alta, de mais um passo e você será eliminado por nossos lazers\". \n Sem pensar duas vezes, Moai diz a senha do bilhete em voz alta, logo após isso, ele escuta um som de confirmação, e então segue para pegar o grimório. \n ")
         linha()
         escreva(" MAGIA ADIQUIRIDA : GRIMÓIRO ANCESTRAL [ITEM/MAGIA DE DANO] \n")
         linha()
@@ -755,7 +755,7 @@ programa
         escreva(" |_____/_/    \\_\\______/_/    \\_\\ |______|_____/   |_|  |_|  \\_\\/_/    \\_\\_| \\_|_|  |_/_/    \\_\\\n")
         linha()
 
-        escreva(" -A sala estava repleta de símbolos estranhos, mas ao olhar em direção da trilha de sangue, seu corpo congelou. \n Havia uma pilha de corpos dentro so que parecia ser um círculo de ritual. \n E desenhando esse círculo, estava um robô gigante, que parecia não ter notado sua presença ainda. \n E tudo isso a frente do que parecia ser a saída, um deck com uma lancha \n")
+        escreva(" -A sala estava repleta de símbolos estranhos, mas ao olhar para onde a trilha de sangue terminava, seu corpo congelou. \n Havia uma pilha de corpos dentro do que parecia ser um círculo ritualístico. \n E desenhando esse círculo, estava um robô gigante, que parecia não ter notado sua presença ainda. \n E tudo isso a frente do que parecia ser a saída, um cais com uma lancha \n")
         linha()
         escreva("PRESSIONE [1] PARA CONTINUAR : ")
         leia(escolhas)
@@ -770,7 +770,7 @@ programa
         escreva(" |_____/_/    \\_\\______/_/    \\_\\ |______|_____/   |_|  |_|  \\_\\/_/    \\_\\_| \\_|_|  |_/_/    \\_\\\n")
         linha()
 
-        escreva(" -Mas ao tentar se aproximar mais, o robô nota sua presença. \n Se virando para ele e dizendo: \n \"Olha só quem apareceu? Se não é MOAI, o famoso degustador de vinhos. Eu estava pensando que todos já estavam mortos, mas parece que a  única peça  restante veio até mim  (THE ONE PIECE!!!!, THE ONE PIECE IS REAAAAL!!!!). \n Mas não fique triste, pois sua vida servirá a um nobre propósito. \n Agora SUCUMBA!!! \"\n")
+        escreva(" -Mas ao tentar se aproximar mais, o robô nota sua presença. \n Se virando para ele e dizendo: \n \"Olha só quem apareceu? Se não é MOAI, o famoso degustador de vinhos. Eu estava pensando que todos já estavam mortos, mas parece que a única peça restante veio até mim  (THE ONE PIECE!!!!, THE ONE PIECE IS REAAAAL!!!!). \n Mas não fique triste, pois sua vida servirá a um nobre propósito. \n Agora SUCUMBA!!! \"\n")
         linha()
         escreva("PRESSIONE [1] PARA CONTINUAR : ")
         leia(escolhas)
@@ -789,7 +789,7 @@ programa
         linha()
         
         
-        escreva(" -Logo após derrotar o robô, Moai vai até ele para averiguar quem o estava o controla1ndo. \n E ao olhar para dentro da cabine, ele vê um homem idoso, que estava preso lá, que ao percebe-lo, diz: \n Você pode achar que ganhou de MIM, RODRIGO ESTOMBELY CEPTILES O CHEFE DOS MAGNATAS DO VINHO, mas eu te digo uma coisa, caro degustador, a vontade do mestre NUNCA morre. \n E proferindo essas palavras, Rodrigo se explode dentro da cabine, que faz com que ele arremesse Moai até o deck. \n")
+        escreva(" -Logo após derrotar o robô, Moai vai até ele para averiguar quem o estava o controlando. \n E ao olhar para dentro da cabine, ele vê um homem idoso, que estava preso lá, que ao percebe-lo, diz: \n Você pode achar que ganhou de MIM, RODRIGO ESTOMBELY CEPTILES O CHEFE DOS MAGNATAS DO VINHO, mas eu te digo uma coisa, caro degustador, a vontade do mestre NUNCA morre. \n E proferindo essas palavras, Rodrigo se explode dentro da cabine, arremessando Moai até o cais. \n")
         linha()
         escreva("PRESSIONE [1] PARA CONTINUAR : ")
         leia(escolhas)
@@ -805,7 +805,7 @@ programa
         linha()
         
 
-        escreva(" -Recobrando seus sentidos, Moai observa o que sobrou do robô, completamente em chamas. \n Mas focando em seu objetivo, ele segue em direção a lancha, quando de repente, ele observa o mar pacífico . \n Que outrora era pacífico, completamente revolto e com uma enorme tempestade se formando. \n No início, nada parece fazer sentido, contudo, ao analizar sua situação, é perceptível. \n Os últimos momentos de Rodrigo não haviam sido em vão, pois com seu sacríficio, seu plano havia se concretizado. \n")
+        escreva(" -Recobrando seus sentidos, Moai observa o que sobrou do robô, completamente em chamas. \n Mas focando em seu objetivo, ele segue em direção a lancha, quando de repente, ele observa o mar. \n Outrora pacífico, completamente revolto e com uma enorme tempestade se formando. \n No início, nada parece fazer sentido, contudo, ao analizar sua situação, ele percebe. \n Os últimos momentos de Rodrigo não haviam sido em vão, pois com seu sacríficio, seu plano havia se concretizado. \n")
         linha()
         escreva("PRESSIONE [1] PARA CONTINUAR : ")
         leia(escolhas)
@@ -820,7 +820,7 @@ programa
         escreva("  \\_____\\__,_|_|___/ \n")
         linha()
         
-        escreva(" -Em suas costas, uma luz irradiava do círculo ritualístico, enquanto uma figura gigantesca emergia do mar a sua frente. \n Percebendo que não sairia daquele lugar com aquela tempestade, Moai decide derrotar a criatura, a causadora de todo aquele mal. \n A criatura possuia proporções gigantescas e tinha a aparência de um híbrido entre um humano, um polvo e um dragão. \n E assim se inicia a batalha. \n")
+        escreva(" -Atrás dele, uma luz irradiava do círculo ritualístico, enquanto uma figura gigantesca emergia do mar a sua frente. \n Percebendo que não sairia daquele lugar com aquela tempestade, Moai decide derrotar a criatura, a causadora de todo aquele mal. \n A criatura possuia proporções gigantescas e tinha a aparência de um híbrido entre um humano, um polvo e um dragão. \n E assim se inicia a batalha. \n")
         linha()
         escreva("PRESSIONE [1] PARA CONTINUAR : ")
         leia(escolhas)
@@ -840,7 +840,7 @@ programa
         escreva(" |_|    |_|_| |_|\\__,_|_| |____| \n")
         linha()
 
-        escreva(" -Ao recitar as palavras escritas nas páginas, correntes negras saem do grimório em direção a criatura. \n Que solta um grito estrondoso enquanto é amarrada pelas corrente e submergida no mar, colocando a criatura em seu sono eterno novamente, para nunca mais ser despertada. \n Com a morte da criatura, a calmaria se instaura na natureza, os mares revoltos voltam a sua tranquilidade e os céus se abrem, como se nada tivesse acontecido. \n Moai então, sobe na lancha e a pilota em direção a sua casa, mas antes de levar algumas caixas de vinho com ele para revender, e assim, o mundo é salvo por nosso herói. \n Que volta para sua casa são e salvo, ficando ainda mais rico com os vinhos roubados e curtindo tudo ao máximo, ao aprender que sua vida pode acabar a qualquer momento. \n")
+        escreva(" -Ao recitar as palavras escritas nas páginas, correntes negras saem do grimório em direção a criatura. \n Que solta um grito estrondoso enquanto é amarrada pelas corrente e submergida no mar, colocando a criatura em seu sono eterno novamente, para nunca mais ser despertada. \n Com a morte da criatura, a calmaria se instaura na natureza, os mares revoltos voltam a sua tranquilidade e os céus se abrem, como se nada tivesse acontecido. \n Moai então, sobe na lancha e a pilota em direção a sua casa, mas não antes de levar algumas caixas de vinho com ele para revender, e assim, o mundo é salvo por nosso herói. \n Que volta para sua casa são e salvo, ficando ainda mais rico com os vinhos roubados e curtindo tudo ao máximo, ao aprender que sua vida pode acabar a qualquer momento. \n")
         linha()
         escreva("PRESSIONE [1] PARA CONTIUNAR : ")
         leia(escolhas)
