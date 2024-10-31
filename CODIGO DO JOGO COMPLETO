@@ -317,7 +317,7 @@ programa
                 }
 
                 vida_j = vida_j - (dano_b/2)
-                dano_j = (u.sorteia(20,60)) /1.5
+                dano_j = (u.sorteia(20,60)) /2
                 vida_b =  vida_b - dano_j
                 escreva("A defesa dimuiu o dano do Boss e o o deixou em choque você recebeu : ", dano_b/2 ," de dano , e causou  : ", dano_j, "  de dano \n")         
                   pare
@@ -612,7 +612,7 @@ programa
     limpa()
    
     u.aguarde(1000)
-    fin_mal(1000)
+    fin_mal()
    
   
    
@@ -877,7 +877,7 @@ programa
         escreva("$$ |  $$ |      $$\\$$\\$$ $$ |$$ |  $$ |$$  __$$\\ $$  __$$ |$$  __$$\\       $$$$$\\ $$  __$$\\ $$ |      \\$$$$$$\\   \\____$$\\ $$ |\\$$\\  $$  |$$  __$$\\ \n")
         escreva("$$ |  $$ |      $$ \\$$$  $$ |$$ |  $$ |$$ |  $$ |$$ /  $$ |$$ /  $$ |      $$  __|$$ /  $$ |$$ |       \\____$$\\  $$$$$$$ |$$ | \\$$\\$$  / $$ /  $$ | \n")
         escreva("$$ |  $$ |      $$ |\\$  /$$ |$$ |  $$ |$$ |  $$ |$$ |  $$ |$$ |  $$ |      $$ |   $$ |  $$ |$$ |      $$\\   $$ |$$  __$$ |$$ |  \\$$$  /  $$ |  $$ | \n")
-        escreva(" $$$$$$  |      $$ | \\_/ $$ |\\$$$$$$  |$$ |  $$ |\\$$$$$$$ |\\$$$$$$  |      $$ |   \\$$$$$$  |$$ |      \\$$$$$$  |\\$$$$$$$ |$$ |   \$  /   \\$$$$$$  | \n")
+        escreva(" $$$$$$  |      $$ | \\_/ $$ |\\$$$$$$  |$$ |  $$ |\\$$$$$$$ |\\$$$$$$  |      $$ |   \\$$$$$$  |$$ |      \\$$$$$$  |\\$$$$$$$ |$$ |   \\$  /   \\$$$$$$  | \n")
         escreva(" \\______/       \\__|     \\__| \\______/ \\__|  \\__| \\_______| \\______/       \\__|    \\______/ \\__|       \\______/  \\_______|\\__|    \\_/     \\______/ \n")
         linha()
 
@@ -967,11 +967,11 @@ programa
     escreva(" -Mais não desista, porque sempre haverá outro caminho. \n")
     linha()
 
-    escreva("PRESSIONE [1] PARA FINALIZAR O CÓDIGO E TENTAR NOVAMENTE : ")
+    escreva("PRESSIONE [A] PARA FINALIZAR O CÓDIGO E TENTAR NOVAMENTE : ")
     leia(escolhas)
     u.aguarde(1000)
     limpa()
-    escolhas = "a"
+    
   
 
   }
