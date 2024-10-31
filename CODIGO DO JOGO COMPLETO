@@ -50,7 +50,7 @@ programa
       escreva(" / _ \\ V / | |\\__ \\ (_) |_|_|_| \n")
       escreva("/_/ \\_\\_/ |___|___/\\___/(_|_|_) \n")
      linha()
-     escreva("  -AS AÇÕES A SEGUIR NO JOGO SÃO IMUTAVEIS! ENTÃO TOME CUIDADO. \n  -E CASO VOCÊ ERRE ALGUMAS ESCOLHA FORA DO COMBATE SEU JOGO SERÁ ENCERRADO, ENTÃO TENHA CERTEZA DE COLOCAR O CARACTERE CORRETO E PRESSIONAR [ENTER]. \n ")
+     escreva("  -AS AÇÕES A SEGUIR NO JOGO SÃO IMUTAVEIS! ENTÃO TOME CUIDADO. \n  -E CASO VOCÊ ERRE ALGUMAS ESCOLHA FORA DO COMBATE E NO COMBATE SEU JOGO SERÁ ENCERRADO, ENTÃO TENHA CERTEZA DE COLOCAR O CARACTERE CORRETO E PRESSIONAR [ENTER]. \n ")
      linha()
      escreva("PRESSIONE [1] PARA CONTINUAR : ")
      leia(escolhas)
