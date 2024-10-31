@@ -204,6 +204,7 @@ programa
       leia(escolhas)
       //u.aguarde(100)
       limpa()
+      linha()
     escreva("___ ___  ___ ___ ___ ___   ___  ___ \n") 
      escreva("  / __/ _ \\| _ \\ _ \\ __|   \\ / _ \\| _ \\ \n")
      escreva(" | (_| (_) |   /   / _|| |) | (_) |   / \n")
@@ -273,7 +274,7 @@ programa
          linha()
          escreva("┏┓┳┏┓┓┏┏┳┓╻   HP : ", vida_j, "/" , vida_j_max , "   |AÇÕES ---->       [1] ATK | INIMIGO ----->        | ", boss, " [" , vida_b , "/" , vida_b_mx,  "]\n")
          escreva("┣ ┃┃┓┣┫ ┃ ┃                  |AÇÕES ---->       [2] DEF | INIMIGO ----->        | ATK [20 ~ ??]          \n")
-	       escreva("┻ ┻┗┛┛┗ ┻ •   ATK : " , 20 , " ~ ", 60 , " |AÇÕES ---->       [3] INV | INIMIGO ----->        |      \n")
+	       escreva("┻ ┻┗┛┛┗ ┻ •   ATK : " , 20 , " ~ ", 60 , "  |AÇÕES ---->       [3] INV | INIMIGO ----->        |      \n")
          linha()
          escreva("ESCOLHA UMA OPÇÃO : ")
          leia(acao)
@@ -317,7 +318,7 @@ programa
                 }
 
                 vida_j = vida_j - (dano_b/2)
-                dano_j = (u.sorteia(20,60)) /2
+                dano_j = u.sorteia(20,60) 
                 vida_b =  vida_b - dano_j
                 escreva("A defesa dimuiu o dano do Boss e o o deixou em choque você recebeu : ", dano_b/2 ," de dano , e causou  : ", dano_j, "  de dano \n")         
                   pare
@@ -522,7 +523,7 @@ programa
     escreva(" | (___   /  \\  | |       /  \\    | |__  | (___    | |  | |__) |   /  \\  |  \\| | |__| |  /  \\   \n")
     escreva("  \\___ \\ / /\\ \\ | |      / /\\ \\   |  __|  \\___ \\   | |  |  _  /   / /\\ \\ | . ` |  __  | / /\\ \\  \n")
     escreva("  ____) / ____ \\| |____ / ____ \\  | |____ ____) |  | |  | | \\ \\  / ____ \\| |\\  | |  | |/ ____ \\ \n")
-    escreva(" |_____/_/    \\_\\______/_/    \\_\\ |______|_____/   |_|  |_|  \\_\\/_/    \\_\\_| \\_|_|  |_/_/    \\_\\\n")
+    escreva(" |_____/_/    \\_\\______/_/    \\_\\ |______|_____/   |_|  |_|  \\_\\/_/    \\_\\_| \\_|_|  |_/_/    \\_\\\\ \n")
     linha()
 
     escreva(" -Saindo do escritório, Moai segue o corredor a sua frente, sendo guiado por uma trilha de sangue e símbolos estranhos. \n Quando ele entra em uma sala completamente escura. \n Mas ao dar alguns passos pra fente, as luzes se acendem completamente, revelendo uma sala enorme. \n")
@@ -537,7 +538,7 @@ programa
     escreva(" | (___   /  \\  | |       /  \\    | |__  | (___    | |  | |__) |   /  \\  |  \\| | |__| |  /  \\   \n")
     escreva("  \\___ \\ / /\\ \\ | |      / /\\ \\   |  __|  \\___ \\   | |  |  _  /   / /\\ \\ | . ` |  __  | / /\\ \\  \n")
     escreva("  ____) / ____ \\| |____ / ____ \\  | |____ ____) |  | |  | | \\ \\  / ____ \\| |\\  | |  | |/ ____ \\ \n")
-    escreva(" |_____/_/    \\_\\______/_/    \\_\\ |______|_____/   |_|  |_|  \\_\\/_/    \\_\\_| \\_|_|  |_/_/    \\_\\\n")
+    escreva(" |_____/_/    \\_\\______/_/    \\_\\ |______|_____/   |_|  |_|  \\_\\/_/    \\_\\_| \\_|_|  |_/_/    \\_\\ \n")
     linha()
 
     escreva(" -A sala estava repleta de símbolos estranhos, mas ao olhar em direção da trilha de sangue, seu corpo congelou. \n Havia uma pilha de corpos dentro so que parecia ser um círculo de ritual. \n E desenhando esse círculo, estava um robô gigante, que parecia não ter notado sua presença ainda. \n E tudo isso a frente do que parecia ser a saída, um deck com uma lancha \n")
@@ -552,10 +553,10 @@ programa
     escreva(" | (___   /  \\  | |       /  \\    | |__  | (___    | |  | |__) |   /  \\  |  \\| | |__| |  /  \\   \n")
     escreva("  \\___ \\ / /\\ \\ | |      / /\\ \\   |  __|  \\___ \\   | |  |  _  /   / /\\ \\ | . ` |  __  | / /\\ \\  \n")
     escreva("  ____) / ____ \\| |____ / ____ \\  | |____ ____) |  | |  | | \\ \\  / ____ \\| |\\  | |  | |/ ____ \\ \n")
-    escreva(" |_____/_/    \\_\\______/_/    \\_\\ |______|_____/   |_|  |_|  \\_\\/_/    \\_\\_| \\_|_|  |_/_/    \\_\\\n")
+    escreva(" |_____/_/    \\_\\______/_/    \\_\\ |______|_____/   |_|  |_|  \\_\\/_/    \\_\\_| \\_|_|  |_/_/    \\_\\ \n")
     linha()
 
-    escreva(" -Mas ao tentar se aproximar mais, o robô nota sua presença. \n Se virando para ele e dizendo: \n \"Olha só quem apareceu? Se não é MOAI, o famoso degustador de vinhos. Eu estava pensando que todos já estavam mortos, mas parece que a peça restante veio até mim. Mas não fique triste, pois sua vida servirá a um nobre propósito. Agora SUCUMBA!!! \"\n")
+    escreva(" -Mas ao tentar se aproximar mais, o robô nota sua presença. \n Se virando para ele e dizendo: \n \"Olha só quem apareceu? Se não é MOAI, o famoso degustador de vinhos. \n Eu estava pensando que todos já estavam mortos, mas parece que a peça restante veio até mim.\n Mas não fique triste, pois sua vida servirá a um nobre propósito.  \n Agora SUCUMBA!!! \"\n")
     linha()
     escreva("PRESSIONE [1] PARA CONTINUAR : ")
     leia(escolhas)
@@ -570,7 +571,7 @@ programa
     escreva(" | (___   /  \\  | |       /  \\    | |__  | (___    | |  | |__) |   /  \\  |  \\| | |__| |  /  \\   \n")
     escreva("  \\___ \\ / /\\ \\ | |      / /\\ \\   |  __|  \\___ \\   | |  |  _  /   / /\\ \\ | . ` |  __  | / /\\ \\  \n")
     escreva("  ____) / ____ \\| |____ / ____ \\  | |____ ____) |  | |  | | \\ \\  / ____ \\| |\\  | |  | |/ ____ \\ \n")
-    escreva(" |_____/_/    \\_\\______/_/    \\_\\ |______|_____/   |_|  |_|  \\_\\/_/    \\_\\_| \\_|_|  |_/_/    \\_\\\n")
+    escreva(" |_____/_/    \\_\\______/_/    \\_\\ |______|_____/   |_|  |_|  \\_\\/_/    \\_\\_| \\_|_|  |_/_/    \\_\\ \n")
     linha()
    
    
@@ -760,7 +761,7 @@ programa
         escreva(" | (___   /  \\  | |       /  \\    | |__  | (___    | |  | |__) |   /  \\  |  \\| | |__| |  /  \\   \n")
         escreva("  \\___ \\ / /\\ \\ | |      / /\\ \\   |  __|  \\___ \\   | |  |  _  /   / /\\ \\ | . ` |  __  | / /\\ \\  \n")
         escreva("  ____) / ____ \\| |____ / ____ \\  | |____ ____) |  | |  | | \\ \\  / ____ \\| |\\  | |  | |/ ____ \\ \n")
-        escreva(" |_____/_/    \\_\\______/_/    \\_\\ |______|_____/   |_|  |_|  \\_\\/_/    \\_\\_| \\_|_|  |_/_/    \\_\\\n")
+        escreva(" |_____/_/    \\_\\______/_/    \\_\\ |______|_____/   |_|  |_|  \\_\\/_/    \\_\\_| \\_|_|  |_/_/    \\_\\ \n")
         linha()
 
         escreva(" -Saindo da sala segura, Moai segue uma trilha de símbolos parecidos com os da porta, \n Sendo guiado até uma sala completamente escura. \n Porém, ao dar alguns passos pra fente, as luzes se acendem completamente, revelendo uma sala enorme.")
@@ -775,7 +776,7 @@ programa
         escreva(" | (___   /  \\  | |       /  \\    | |__  | (___    | |  | |__) |   /  \\  |  \\| | |__| |  /  \\   \n")
         escreva("  \\___ \\ / /\\ \\ | |      / /\\ \\   |  __|  \\___ \\   | |  |  _  /   / /\\ \\ | . ` |  __  | / /\\ \\  \n")
         escreva("  ____) / ____ \\| |____ / ____ \\  | |____ ____) |  | |  | | \\ \\  / ____ \\| |\\  | |  | |/ ____ \\ \n")
-        escreva(" |_____/_/    \\_\\______/_/    \\_\\ |______|_____/   |_|  |_|  \\_\\/_/    \\_\\_| \\_|_|  |_/_/    \\_\\\n")
+        escreva(" |_____/_/    \\_\\______/_/    \\_\\ |______|_____/   |_|  |_|  \\_\\/_/    \\_\\_| \\_|_|  |_/_/    \\_\\\\ \n")
         linha()
 
         escreva(" -A sala estava repleta de símbolos estranhos, mas ao olhar em direção da trilha de sangue, seu corpo congelou. \n Havia uma pilha de corpos dentro so que parecia ser um círculo de ritual. \n E desenhando esse círculo, estava um robô gigante, que parecia não ter notado sua presença ainda. \n E tudo isso a frente do que parecia ser a saída, um deck com uma lancha \n")
@@ -790,7 +791,7 @@ programa
         escreva(" | (___   /  \\  | |       /  \\    | |__  | (___    | |  | |__) |   /  \\  |  \\| | |__| |  /  \\   \n")
         escreva("  \\___ \\ / /\\ \\ | |      / /\\ \\   |  __|  \\___ \\   | |  |  _  /   / /\\ \\ | . ` |  __  | / /\\ \\  \n")
         escreva("  ____) / ____ \\| |____ / ____ \\  | |____ ____) |  | |  | | \\ \\  / ____ \\| |\\  | |  | |/ ____ \\ \n")
-        escreva(" |_____/_/    \\_\\______/_/    \\_\\ |______|_____/   |_|  |_|  \\_\\/_/    \\_\\_| \\_|_|  |_/_/    \\_\\\n")
+        escreva(" |_____/_/    \\_\\______/_/    \\_\\ |______|_____/   |_|  |_|  \\_\\/_/    \\_\\_| \\_|_|  |_/_/    \\_\\ \n")
         linha()
 
         escreva(" -Mas ao tentar se aproximar mais, o robô nota sua presença. \n Se virando para ele e dizendo: \n \"Olha só quem apareceu? Se não é MOAI, o famoso degustador de vinhos. Eu estava pensando que todos já estavam mortos, mas parece que a  única peça  restante veio até mim  (THE ONE PIECE!!!!, THE ONE PIECE IS REAAAAL!!!!). \n Mas não fique triste, pois sua vida servirá a um nobre propósito. \n Agora SUCUMBA!!! \"\n")
@@ -808,7 +809,7 @@ programa
         escreva(" | (___   /  \\  | |       /  \\    | |__  | (___    | |  | |__) |   /  \\  |  \\| | |__| |  /  \\   \n")
         escreva("  \\___ \\ / /\\ \\ | |      / /\\ \\   |  __|  \\___ \\   | |  |  _  /   / /\\ \\ | . ` |  __  | / /\\ \\  \n")
         escreva("  ____) / ____ \\| |____ / ____ \\  | |____ ____) |  | |  | | \\ \\  / ____ \\| |\\  | |  | |/ ____ \\ \n")
-        escreva(" |_____/_/    \\_\\______/_/    \\_\\ |______|_____/   |_|  |_|  \\_\\/_/    \\_\\_| \\_|_|  |_/_/    \\_\\\n")
+        escreva(" |_____/_/    \\_\\______/_/    \\_\\ |______|_____/   |_|  |_|  \\_\\/_/    \\_\\_| \\_|_|  |_/_/    \\_\\ \n")
         linha()
         
         
